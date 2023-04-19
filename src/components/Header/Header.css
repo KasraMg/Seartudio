@@ -1,0 +1,32 @@
+.main_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.main_header section{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.main_header button:nth-child(1){
+background-color: #FF0000;
+color: white;
+border: none;
+}
+.main_header button:nth-child(2){
+    background-color: white;
+    color: #FF0000;
+    border: #FF0000 1px solid;
+}
+.main_header button{
+    border-radius: 30px;
+    padding: .5rem 2rem .5rem 2rem;
+    font-family: lalezar;
+    font-size: 1.2rem;
+}
+.main_header img{
+ height: 114px;
+width: 240px;
+}
+

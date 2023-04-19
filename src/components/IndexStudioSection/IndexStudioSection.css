@@ -1,0 +1,74 @@
+.index-studio-absolute-img{
+    position: absolute;
+    right: -12px;
+   top: 0px;
+}
+
+.index-studio-title{
+    font-family: lalezar;
+font-size: 39px;
+display: flex;
+justify-content: right;
+flex-direction: row-reverse;
+align-items: baseline;
+gap: 10px;
+}
+
+.index-studio-title div img:nth-child(2){
+    position: relative;
+    right: 35px;
+}
+
+.index-studios-section-title-img-1{
+    position: relative;
+    top: 15px;
+    
+}
+
+.index-studio-details{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    text-align: right;
+    padding-left: 9rem;
+}
+
+.index-studio-price,
+.index-studio-city{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.index-studio-price p,
+.index-studio-city p{
+direction: rtl;
+font-family: lalezar;
+}
+.index-studio-price{
+    font-size: 35px;
+}
+.index-studio-city{
+    font-size: 20px;
+}
+
+.index-studio-description p{
+    font-family: lalezar;
+direction: rtl;
+font-size: 23px;
+width: 324px;
+
+}
+
+.index-studio{
+    background: #767676;
+    color: white;
+    border-radius: 50px;
+    padding-right: 18rem;
+    position: relative;
+    padding-top: 1rem;
+    width: 100%;
+    box-shadow: -27px 32px 20px -19px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3rem;
+    
+}

@@ -1,0 +1,155 @@
+.index_page{
+    padding: 0rem 14rem;
+}
+/* index-intro */
+.index-intro div{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-top: 3rem;
+}
+.index-intro{
+    display: flex;
+    gap: 10px;
+    margin-top: 8rem;
+}
+.index-intro p{
+    font-size:  66px;
+    font-family: lalezar;
+    direction: rtl;
+}
+.index-intro span{
+    font-size: 32px;
+    font-family: lalezar;
+    padding-left: 110px;
+    direction: rtl;
+}
+.index-intro img{
+    height: 400px;
+}
+.index-intro  strong{
+    color: #FF0000;
+    font-weight: 500;
+}
+.index-intro button{
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    font-family: lalezar;
+    padding: .4rem 2rem;
+    margin-top: 3rem;
+    width: max-content;
+    margin-left:0rem;
+    font-size: 1.2rem;
+}
+/* index-intro */
+
+
+/* index-find-studio */
+
+.index-find-studio div{
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 3rem;
+
+}
+.index-find-studio{
+    display: flex;
+    gap:0px;
+    flex-direction: row-reverse;
+    margin-top: 8rem;
+}
+.index-find-studio p{
+    font-size:  66px;
+    font-family: lalezar;
+    direction: rtl;
+}
+.index-find-studio span{
+    font-size: 32px;
+    font-family: lalezar;
+    padding-left: 120px;
+    direction: rtl;
+}
+.index-find-studio img{
+    height:370px;
+}
+.index-find-studio  strong{
+    color: #FF0000;
+    font-weight: 500;
+}
+.index-find-studio button{
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    font-family: lalezar;
+    padding: .4rem 2rem;
+    margin-top: 4rem;
+    width: max-content;
+    margin-left:9rem;
+    font-size: 1.2rem;
+}
+/* index-find-studio */
+
+/* index-studios */
+
+.index-studios-title{
+    font-family: lalezar;
+    font-size: 97px;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+.index-studios button{
+    background-color: black;
+    color: white;
+    padding: .3rem 7rem;
+    width: max-content;
+    border-radius: 54px;
+    margin-bottom: 7rem;
+    font-family: lalezar;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+  
+}
+
+
+/* index-studios */
+
+/* index-instagram */
+.index-instagram{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+.index-instagram-title{
+    font-size: 51px;
+    font-family: lalezar;
+    padding-left: 13rem;
+    text-align: right;
+}
+.index-instagram div img:nth-child(1){
+    display: block;
+    margin-left: auto;
+    margin-top: 3rem;
+}
+.index-instagram div img:nth-child(2){
+    display: block;
+    margin-right: auto;
+}
+.index-instagram div div p{
+    font-size: 33px;
+    font-family: lalezar;
+    margin-top: 4rem;
+    margin-right: 20rem;
+}
+.index-instagram div div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    justify-content: left;
+}
+/* index-instagram */

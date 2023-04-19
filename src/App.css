@@ -1,0 +1,31 @@
+@font-face {
+    font-family: lalezar;
+    src: url(./Lalezar-Font/OTF/Lalezar-Regular.otf);
+  }
+  
+  /* @font-face {
+    font-family: vazir;
+    src: url(./fonts/vazir/Vazir-Bold.woff) format("woff");
+  }
+  @font-face {
+    font-family: vazirmd;
+    src: url(./fonts/vazir/Vazir.woff) format('woff');
+  } */
+  *{
+    margin: 0px;
+  }
+  .lalezar {
+    font-family: lalezar;
+  }
+  /* .vazirlight {
+    font-family: vazirlight;
+  }
+  .vazirmd {
+    font-family: vazirmd;
+  } */
+  .fs-9 {
+    font-size: 0.9rem;
+  }
+  .fs-8 {
+    font-size: 0.8rem;
+  }
