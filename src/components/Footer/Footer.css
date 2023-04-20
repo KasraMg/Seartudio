@@ -3,6 +3,13 @@
     margin-top: 8rem;
     margin-bottom: 0rem;
 }
+.main_footer a{
+    text-decoration: none;
+    color: black;
+}
+.main_footer a:hover{
+    color: black;
+}
 .main_footer img{
     height: 114px;
    width: 240px;
@@ -55,4 +62,23 @@
     height: 100%;
     position: relative;
     top: 2px;
+   }
+
+   @media (max-width:700px) {
+    .main_footer main{
+        flex-direction: column;
+    }.main_footer ul {
+        padding-left: 0px;
+        justify-content: center;
+    }.main_footer input {
+       width: 100% !important;
+    }
+    .main_footer section p {
+        margin-right: 1rem;
+    }
+   }
+   @media (max-width:350px) {
+    .main_footer ul li {
+        font-size: 18px !important;
+    }
    }

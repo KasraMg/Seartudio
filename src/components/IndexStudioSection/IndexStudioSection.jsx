@@ -8,8 +8,8 @@ export default function IndexStudioSection() {
         <p >استودیو مزدک</p>
         <img className='index-studios-section-title-img-1' src="../../public/images/index/🦆 icon _voice ok_.png" alt="" />
         <div style={{position:'relative',left:'15px'}}>
-              <img className='pb-2' src="../../public/images/index/Vector.png" alt="" />
-              <img className='pb-2' src="../../public/images/index/Vector1.png" alt="" />
+              <img className='pb-2 verify-icon-1' src="../../public/images/index/Vector.png" alt="" />
+              <img className='pb-2 verify-icon-2' src="../../public/images/index/Vector1.png" alt="" />
         </div>
       
     </div>
@@ -19,7 +19,7 @@ export default function IndexStudioSection() {
             <p className='mb-1'>توضیحات:</p>
             <p>یک متن توضیح برای استودیو  بالا این متن الکیه بخدا</p>
         </div>
-        <div>
+        <div className='index-studio-details-section-2'>
            <div className='index-studio-price'>
             <img src="../../public/images/index/🦆 icon _money square_.png" alt="" />
             <p>  ۱۰۰،۰۰۰ ت</p>

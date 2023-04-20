@@ -48,15 +48,18 @@ export default function Index() {
             </div>
 
             <section className='index-instagram'>
-        <img src="../../public/images/index/bro2.png" alt="" />
+        <img className='main-index-instagram-img' src="../../public/images/index/bro2.png" alt="" />
         <div>
-            <img src="../../public/images/index/New Project (99) 2.png" alt="" />
+            <img  src="../../public/images/index/New Project (99) 2.png" alt="" />
             <p className='index-instagram-title'>مسیر بیزنس پلتفرم پخش بین المللی</p>
+            <a href="https://instagram.com/masir_business/" style={{color:'black',textDecoration:'none'}}>
             <div>
-            <img src="../../public/images/index/🦆 icon _rounded instagram_.png" alt="" />  
+            <img className='index-instagram-icon' src="../../public/images/index/🦆 icon _rounded instagram_.png" alt="" />  
                 <p>masir_business</p>
           
             </div>
+            </a>
+           
             
         </div>
             </section>

@@ -1,6 +1,16 @@
 .index_page{
     padding: 0rem 14rem;
 }
+@media (max-width:1260px) {
+    .index_page{
+        padding: 0rem 2rem;
+    }
+}
+@media (max-width:700px) {
+    .index_page{
+        padding: 0rem 1rem !important;
+    }
+}
 /* index-intro */
 .index-intro div{
     display: flex;
@@ -8,13 +18,51 @@
     padding-right: 2rem;
     padding-top: 3rem;
 }
+@media (max-width:1260px) {
+    .index-intro img{
+        width:53%
+    }
+}
+@media (max-width:990px) {
+    .index-intro{
+        flex-direction: column-reverse;
+        margin-top: 2rem !important;
+    }
+    .index-intro img{
+        width: 80% !important;
+        margin-left: auto;
+        height: 100% !important;
+        object-fit: scale-down;
+        margin-right: auto;
+    }
+}
+@media (max-width:700px) {
+    .index-intro div {
+        padding-right: 0rem !important;
+         justify-content: center;
+        text-align: center;
+    }.index-intro span {
+        padding-left: 0px !important;
+    }.index-intro button {
+        margin-left: auto !important;
+        margin-right: auto;
+    }.index-intro{
+        margin-bottom: 5rem;
+        margin-top: 6rem !important;
+    }
+}
+@media (min-width:701px) {
+    .index-intro p {
+        font-size: 66px !important;
+    }
+}
 .index-intro{
     display: flex;
     gap: 10px;
     margin-top: 8rem;
 }
 .index-intro p{
-    font-size:  66px;
+    font-size: 41px;
     font-family: lalezar;
     direction: rtl;
 }
@@ -54,6 +102,46 @@
     padding-top: 3rem;
 
 }
+@media (max-width:990px) {
+    .index-find-studio{
+        flex-direction: column-reverse !important;
+        margin-top: 2rem !important;
+    }
+    .index-find-studio img{
+        width:100% !important;
+        height: 100% !important;
+        object-fit: scale-down;
+    }.index-find-studio button {
+        margin-left: 0rem !important;
+        margin-top: 3rem !important;
+    }.index-find-studio div {
+        padding-top: 1rem !important;
+    }
+}
+
+@media (max-width:700px) {
+    .index-find-studio div{
+        padding-right: 0rem !important;
+         justify-content: center;
+        text-align: center;
+    }.index-find-studio span {
+        padding-left: 0px !important;
+    }.index-find-studio button {
+        margin-left: auto !important;
+        margin-right: auto;
+    }.index-find-studio{
+        margin-bottom: 4rem;
+    }.index-find-studio img {
+    margin-bottom: 2rem;
+}.index-studios-title{
+    font-size: 50px !important;
+}
+}
+@media (min-width:701px) {
+    .index-intro p {
+        font-size: 66px !important;
+    }
+}
 .index-find-studio{
     display: flex;
     gap:0px;
@@ -61,7 +149,7 @@
     margin-top: 8rem;
 }
 .index-find-studio p{
-    font-size:  66px;
+    font-size:  41px;
     font-family: lalezar;
     direction: rtl;
 }
@@ -95,7 +183,7 @@
 
 .index-studios-title{
     font-family: lalezar;
-    font-size: 97px;
+    font-size: 68px;
     text-align: center;
     margin-top: 7rem;
     margin-bottom: 3rem;
@@ -115,7 +203,11 @@
   
 }
 
-
+@media (min-width:990px) {
+    .index-studios-title{
+        font-size: 97px !important;
+    }
+}
 /* index-studios */
 
 /* index-instagram */
@@ -124,8 +216,72 @@
     flex-direction: row-reverse;
     gap: 30px;
 }
+
+@media (max-width:1260px) {
+    .index-instagram div div p {
+        margin-right: 11rem;
+    }.index-instagram-title {
+        padding-left: 0rem !important;
+    }
+}
+@media (min-width:1262px) {
+    .index-instagram div div p {
+        margin-right: 20rem;
+    }
+}
+
+@media (max-width:990px) {
+    .index-instagram{
+        flex-direction: column !important;
+    
+    }
+ 
+    .main-index-instagram-img{
+        width:58% !important;
+        height: 100% !important;
+        object-fit: scale-down;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .index-instagram div img:nth-child(1) {
+        margin-right: auto;
+    }.index-instagram-title {
+        text-align: center !important;
+    }.index-instagram div div {
+        width:38% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }.index-instagram-title{
+        margin-bottom: 0px;
+    }
+}  
+ @media (min-width:701px) {
+        .index-instagram-title{
+            font-size: 51px;
+        }
+    }
+
+    @media (max-width:700px) {
+        .index-instagram div div {
+            width: 100% !important;
+            justify-content: center !important;
+        }
+        .index-instagram div div p{
+            margin-right: 0rem !important;
+            font-size: 1.5rem !important;
+        }.index-instagram-icon{
+            width: 40px;
+            margin-left: 0px !important;
+            margin-right: .5rem !important;
+          position: relative;
+          top: 12px;
+        }.index-instagram div img:nth-child(1){
+            margin-top: 1rem !important;
+        }
+    }
 .index-instagram-title{
-    font-size: 51px;
+    font-size: 41px;
     font-family: lalezar;
     padding-left: 13rem;
     text-align: right;
@@ -143,7 +299,7 @@
     font-size: 33px;
     font-family: lalezar;
     margin-top: 4rem;
-    margin-right: 20rem;
+  
 }
 .index-instagram div div{
     display: flex;

@@ -7,13 +7,13 @@ export default function Footer() {
             <main>
                      <div>
                 <ul>
-                    <li>تلگرام  </li>
-                    <li>اینستاگرام</li>
+                    <li><a href="https://t.me/seartudio"> تلگرام </a>  </li>
+                    <li><a href="https://instagram.com/seartudio/">اینستاگرام</a>  </li>
                     <li>مسیر بیزنس</li>
 
                     <li>قوانین و مقررا ت </li>
                     <li>درباره ما</li>
-                    <li>پشتیبانی</li>
+                    <li> <a href="https://t.me/seartudio_support">پشتیبانی</a></li>
 
                 </ul>
             </div>
