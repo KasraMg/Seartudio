@@ -1,0 +1,110 @@
+.rules-title,
+.rules-title-2{
+    font-size: 45px;
+    direction: rtl;
+}
+.Rules{
+    font-family: lalezar;
+    text-align: right;
+    position: relative;
+}
+.Rules main{
+    padding: 0rem 8rem;
+}
+.rules-text,
+.rules-text-mobile{
+    font-size: 25px;
+    direction: rtl;
+    line-height: 2.5rem;
+}
+.rules-text p:nth-child(1) ,
+.rules-text-mobile p:nth-child(1){
+    direction: rtl;
+}
+.rules-text p,
+.rules-text-mobile p{
+    width: 781px;
+    margin-bottom: 0px;
+}
+.rules-text a,
+.rules-text-mobile a{
+    color: #FF0000;
+    text-decoration: none;
+}
+.rules-text  a:hover,
+.rules-text-mobile a:hover{
+    color: #FF0000;
+}
+.rules-main-img{
+    position: absolute;
+    width: 580px;
+    height: 550px;
+    left: 54px;
+    top: 225px;
+}
+@media (max-width:1350px) {
+    .rules-main-img {
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        left: 14px;
+        top: 325px;
+    }.Rules main{
+        padding: 0rem 2rem;
+    }
+}
+@media (max-width:1023px) {
+    .rules-main-img {
+        position:relative;
+        top: 0px !important;
+        left: 0px !important;
+        margin: auto;
+    }.Rules main{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 3rem;
+    }.rules-title-2{
+        display: block !important;
+        
+    }.rules-title{
+        display: none !important;
+    }.rules-text p,
+    .rules-text-mobile p{
+        width: 100%;
+    }.rules-text,
+    .rules-text-mobile p {
+        font-size: 23px;
+    }
+}
+@media (max-width:767px) {
+    .rules-main-img {
+     width: 80% !important;  
+     object-fit: contain; 
+    }.Rules main{
+        padding: 0rem 1rem !important;
+    }
+}
+@media (max-width:500px) {
+    .rules-title-2{
+        text-align: center;
+    }.rules-main-img {
+        width: 100% !important;
+        height: 326px;
+        margin-top: 3rem;
+    }.rules-text-mobile{
+        display: block !important;
+    }.rules-text{
+        display: none;
+    }
+}
+@media (max-width:375px) {
+    .rules-text-mobile{
+        text-align: center;
+    }
+}
+.rules-text-mobile{
+    display: none;
+}
+.rules-title-2{
+    display: none;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 export default function Footer() {
     return (
         <footer className='main_footer'>
@@ -11,7 +12,7 @@ export default function Footer() {
                     <li><a href="https://instagram.com/seartudio/">اینستاگرام</a>  </li>
                     <li>مسیر بیزنس</li>
 
-                    <li>قوانین و مقررا ت </li>
+                    <li><Link to='/rules'> قوانین و مقررا ت </Link></li>
                     <li>درباره ما</li>
                     <li> <a href="https://t.me/seartudio_support">پشتیبانی</a></li>
 
