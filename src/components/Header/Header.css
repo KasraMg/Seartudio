@@ -9,18 +9,18 @@
     flex-direction: row-reverse;
     gap: 10px;
 }
-.main_header button:nth-child(1){
+.create-studio-btn{
 background-color: #FF0000;
 color: white;
 border: none;
 }
-.main_header button:nth-child(2){
+.login-btn button{
     background-color: white;
     color: #FF0000;
     transition: all .3s ease;
     border: #FF0000 1px solid;
 }
-.main_header button:nth-child(2):hover{
+.login-btn button:hover{
     background-color: #FF0000;
 color: white;
 

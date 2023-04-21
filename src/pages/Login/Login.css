@@ -1,0 +1,110 @@
+.Login section{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 45px;
+    justify-content: center;
+}
+.Login section div{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    padding-top: 4rem;
+}
+.Login section img{
+    width: 400px;
+}
+
+.Login section div input{
+    width: 400px;
+    background-color: #EC4141;
+    color: rgba(0, 0, 0, 0.475) !important;
+    font-family: lalezar;
+    border-radius: 40px;
+    outline: none !important;
+    border: none;
+    padding: .6rem 3.2rem .6rem 2rem;
+    letter-spacing: 1px;
+}
+.Login section div input::placeholder{
+    color: rgba(0, 0, 0, 0.475) !important;
+}
+.Login input:nth-child(1){
+    background-image: url(../../../public/images/similar/Group\ 26.png);
+    background-repeat: no-repeat;
+    background-position: 353px 3px;
+    background-size: 37px 37px;
+}
+.Login input:nth-child(2){
+    background-image: url(../../../public/images/similar/Group\ 27.png);
+    background-repeat: no-repeat;
+    background-position: 353px 3px;
+    background-size: 37px 37px;
+}
+.Login section button{
+    padding: .4rem 7rem;
+    width: max-content;
+    border: none;
+    background-color: #EC4141;
+    color: white;
+    font-family: lalezar;
+    font-size: 1.2rem;
+    border-radius:50px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 1px;
+}
+.login-footer{
+    display: flex;
+    margin-top: 8rem;
+    justify-content: right;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    font-family: lalezar;
+    font-size: 26px;
+    margin-right: 22%;
+}
+.login-footer p{
+    position: relative;
+    bottom: 5px;
+    margin-bottom: 0px;
+}
+@media (max-width:1200px) {
+    .login-footer {
+        margin-right: 7%;
+    }
+}
+@media (max-width:900px) {
+    .Login section {
+      flex-direction: column-reverse !important;
+    }.Login section div {
+        padding-top: 0px !important;
+    }.login-footer {
+        justify-content: center;
+        margin-right: 0px !important;
+    }.Login section img {
+        width: 300px;
+    }
+}
+@media (max-width:500px) {
+    .Login section div input{
+        width: 287px !important;
+      
+    }
+    .Login section div button{
+        padding: .4rem 4rem !important;
+    }.login-footer {
+        margin-top: 5rem;
+    }.Login section img {
+        margin-top: 4rem;
+    }.Login input:nth-child(1),
+    .Login input:nth-child(2){
+        background-position: 240px 3px;
+    }
+}
+@media (max-width:350px) {
+    .Login section img {
+        width: 280px !important;
+    }
+
+}
