@@ -1,6 +1,6 @@
 import React from 'react'
 import './Rules.css'
-import CustomHeader from '../../../components/CustomHeader/CustomHeader'
+import CustomHeader from '../../components/CustomHeader/CustomHeader'
 export default function Rules() {
     return (
         <div className='Rules'>
