@@ -1,0 +1,30 @@
+.Not-Found span{
+    color: #FF0000;
+}
+.Not-Found {
+    font-family: lalezar;
+    font-size: 50px;
+
+    text-align: center;
+}
+.Not-Found main img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width: 400px;
+}
+.Not-Found p{
+  direction: rtl;
+}
+@media (max-width:700px) {
+    .Not-Found main img{
+        width: 300px;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width:340px) {
+    .Not-Found main img{
+        width: 280px;
+
+    }
+}
