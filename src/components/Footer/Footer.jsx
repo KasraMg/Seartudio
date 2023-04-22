@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
     return (
         <footer className='main_footer'>
-            <img src="../../public/images/similar/New Project (1) 2.svg" alt="Logo" />
+           <Link to='/'> <img src="../../public/images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
             <main>
                      <div>
                 <ul>
                     <li><a href="https://t.me/seartudio"> تلگرام </a>  </li>
                     <li><a href="https://instagram.com/seartudio/">اینستاگرام</a>  </li>
-                    <li>مسیر بیزنس</li>
+                    <li><a href="https://instagram.com/masir_business/">مسیر بیزنس</a> </li>
 
                     <li><Link to='/rules'> قوانین و مقررا ت </Link></li>
-                    <li>درباره ما</li>
+                    <li><Link to='/AboutUs'>درباره ما</Link> </li>
                     <li> <a href="https://t.me/seartudio_support">پشتیبانی</a></li>
 
                 </ul>

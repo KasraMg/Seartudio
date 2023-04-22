@@ -1,0 +1,343 @@
+.SignUp{
+    padding: 0rem 14rem;
+}
+@media (max-width:1260px) {
+    .SignUp{
+        padding: 0rem 2rem;
+    }
+}
+@media (max-width:700px) {
+    .SignUp{
+        padding: 0rem 1rem !important;
+    }
+}
+
+.SignUp-section{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 3rem;
+}
+.SignUp-section div{
+    text-align: right;
+    font-family: lalezar;
+    padding-top: 3rem;
+}
+.SignUp-section span,
+.SignUp-section p{
+    direction: rtl;
+}
+.SignUp-section span a{
+    text-decoration: none;
+    color: #FF0000;
+}
+.SignUp-section span{
+    font-size: 20px;
+    position: relative;
+    top: 80px;
+}
+.SignUp-section p{
+    font-size: 35px;
+    padding-left: 3rem;
+}
+
+@media (max-width:900px) {
+    .SignUp-section{
+        flex-direction: column-reverse !important;
+    }.SignUp-section img{
+        width: 53%;
+        margin-left: auto;
+        margin-right: auto;
+    }.SignUp-section div {
+        text-align: center;
+    }.create-studio main {
+        grid-template-columns: auto !important;
+    }.create-studio-title {
+        margin-top: 7rem;
+    }.SignUp-section span {
+        top: 6px !important;
+    }.SignUp-section p {
+        padding-left: 0px !important;
+    }.create-studio input{
+        width: 510px !important;
+    }
+}
+@media (max-width:767px) {
+    .create-studio input{
+        width: 100% !important;
+    }.sign-up-studio-span {
+    
+        left: 0px !important;
+        color: rgba(255, 255, 255, 0.5);
+     right: 55px;
+     width:84px !important;
+        text-align: right !important;
+        background-color: #EC4141 !important;
+        height: 27px !important;
+      
+    } .sign-up-logo-span{
+        width: 84px !important;
+        text-align: right !important;
+        background-color: #EC4141 !important;
+        height: 27px !important;
+        left: 0px !important;
+        right: 55px;
+    }
+}
+@media (max-width:350px) {
+    .create-studio input::placeholder{
+        font-size: .8rem;
+    }.create-studio .dropdown-toggle{
+        font-size: .8rem;
+    }.sign-up-logo-span,
+    .sign-up-studio-span{
+        font-size: .8rem;
+    }.create-studio .dropdown-toggle {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }  .sign-up-logo-span{
+        width: 82px !important;
+    }  .sign-up-studio-span {
+    
+        width: 82px !important;
+    }
+}
+.create-studio{
+    margin-top: 5rem;
+}
+.create-studio-title{
+    font-size: 40px;
+    text-align: center;
+    font-family: lalezar;
+}
+.create-studio input{
+    width: 400px;
+    background-color: #EC4141;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    border-radius: 40px;
+    outline: none !important;
+    border: none;
+    padding: .8rem 3.2rem .8rem 2rem;
+    letter-spacing: 1px;
+    background-repeat: no-repeat;
+    background-position: 98% 5px;
+    background-size: 37px 37px;
+}
+.create-studio main{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 110px;
+    row-gap: 15px !important;
+    padding-bottom: 2rem;
+}
+.create-studio input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+.create-studio input:nth-child(1){
+    background-image: url(../../../public/images/similar/Group\ 26.png);
+}
+.create-studio input:nth-child(2){
+    background-image: url(../../../public/images/signup/Group\ 30.png);
+}
+.create-studio input:nth-child(3){
+    background-image: url(../../../public/images/signup/Vector.png);
+}
+.create-studio input:nth-child(4){
+    background-image: url(../../../public/images/signup/phone.png);
+}
+.create-studio input:nth-child(5){
+    background-image: url(../../../public/images/signup/Group\ 31.png);
+}
+.create-studio input:nth-child(6){
+    background-image: url(../../../public/images/signup/Group\ 28.png);
+}
+.create-studio input:nth-child(7){
+    background-image: url(../../../public/images/signup/Group\ 32.png);
+}
+.create-studio input:nth-child(8){
+    background-image: url(../../../public/images/signup/Group\ 322.png);
+}
+.create-studio input:nth-child(9){
+    background-image: url(../../../public/images/signup/Vector4.png);
+}
+.file-input-parent::after{
+    background-image: url(../../../public/images/signup/Group\ 326.png);
+    background-position: center;
+    background-size: 27px 25px;
+    display: table-column;
+    margin-left: 2.255em;
+    width: 28px;
+    position: absolute;
+    vertical-align: 0.255em;
+    content: "";
+    top: 12px;
+    left: -22px;
+    height: 29px;
+    background-repeat: no-repeat;
+}
+.telegram-input::after{
+    background-image: url(../../../public/images/signup/Group\ 326.png);
+    background-position: center;
+    background-size: 27px 25px;
+    display: table-column;
+    margin-left: 2.255em;
+    width: 28px;
+    position: absolute;
+    vertical-align: 0.255em;
+    content: "";
+    top: 12px;
+    left: -22px;
+    height: 29px;
+    background-repeat: no-repeat;
+}
+.create-studio input:nth-child(10){
+    background-image: url(../../../public/images/signup/Vector5.png);
+}
+.create-studio input:nth-child(11){
+    background-image: url(../../../public/images/signup/Group\ 323.png);
+}
+.create-studio input:nth-child(12){
+    background-image: url(../../../public/images/signup/Group\ 324.png);
+}
+.create-studio input:nth-child(13){
+    background-image: url(../../../public/images/signup/Vector3.png);
+}
+
+
+
+.create-studio .cyties-dropDown .dropdown-toggle{
+    background-image: url(../../../public/images/signup/Group\ 325.png);
+}
+.licens-dropDown .dropdown-toggle{
+    background-image: url(../../../public/images/signup/Group\ 322.png); 
+}
+.studio-type-dropDown .dropdown-toggle{
+    background-image: url(../../../public/images/signup/Vector5.png); 
+}
+.create-studio .dropdown-toggle{
+    background-color: #EC4141 !important;
+  color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 98% 3px;
+    background-size: 37px 37px;
+  
+    padding: 10px 10%;
+    border-radius: 50px;
+    padding-right: 3.5rem;
+}
+@media (min-width:351px) {
+    .create-studio .dropdown-toggle{
+        padding-top: .8rem !important ;
+        padding-bottom: .8rem  !important;
+    }
+}
+.create-studio .dropdown-toggle:hover{
+    background-color: #EC4141 !important;
+    color: rgba(255, 255, 255, 0.5);
+}
+.create-studio .dropdown-toggle:hover,
+.create-studio .dropdown-toggle:active,
+.create-studio .dropdown-toggle:focus-visible {
+    background-color: #EC4141 !important;
+  color: rgba(255, 255, 255, 0.5);
+    border: none !important;
+}
+
+.create-studio  .dropdown-toggle::after {
+
+    background-image: url(/public/images/signup/Vector6.png);
+    border: none !important;
+    background-size: 23px 14px;
+    display: inline-block;
+    margin-left: 0.255em;
+    width: 76px;
+    vertical-align: 0.255em;
+    height: 45px;
+    position: absolute;
+    top: 14px;
+    left: 22px;
+    content: "";
+    background-repeat: no-repeat;
+}
+
+.create-studio  .dropdown-menu{
+    inset: 0px 4px auto 0px !important;
+    text-align: right;
+    font-family: lalezar;
+}
+.cyties-dropDown .dropdown-menu{
+    height: 102px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.create-studio main div{
+    position: relative;
+}
+.sign-up-studio-span{
+    position: absolute;
+    top: 14px;
+    left: 260px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    z-index: 100;
+    background-color: transparent;
+}
+.sign-up-logo-span{
+    position: absolute;
+    top: 14px;
+    right: 55px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    z-index: 100;
+    background-color: transparent;
+}
+.rules-input{
+    background-image: url(../../../public/images/signup/Rectangle\ 39.png);
+    padding-right: 1.2rem !important;
+    background-position: 16px 9px !important;
+    background-size: 29px 31px !important;  
+}
+
+.create-studio-btn{
+    padding: .4rem 4rem .2rem;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: lalezar;
+    background-color: #EC4141;
+    color: white;
+    display: block;
+    border: none;
+    border-radius: 60px;
+    font-size: 28px;
+    margin-bottom: 4rem;
+}
+
+.logo-input{
+    background-image: url(../../../public/images/signup/Group\ 323.png) !important;
+    background-position-y: 8px !important;
+    color: transparent !important;
+}
+.picture-input{
+    background-image: url(../../../public/images/signup/Group\ 324.png) !important;
+    background-position-y: 8px !important;
+    color: transparent !important;
+}
+
+.logo-input::-webkit-file-upload-button,
+.picture-input::-webkit-file-upload-button{
+    border: none;
+    border-radius: 30px;
+    background: #D9D9D9;
+    padding-top: .2rem;
+    margin-left: 1rem;
+}

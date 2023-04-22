@@ -114,6 +114,11 @@ margin-bottom: 4rem;
     text-align: right;
     font-family: lalezar;
 }
+.cyties-dropDown .dropdown-menu{
+    height: 102px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
 .studios-licens{
     display: flex;
     gap: 30px;

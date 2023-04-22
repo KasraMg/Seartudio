@@ -1,10 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Studios.css'
 import Dropdown from 'react-bootstrap/Dropdown';
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import IntroStudioSection from '../../components/IntroStudioSection/IntroStudioSection'
+import  provinces  from './data';
 export default function Studios() {
+    const [Allprovinces,setAllProvinces]=useState(provinces)
     return (
         <div className='Studios'>
             <Header />
@@ -22,15 +24,16 @@ export default function Studios() {
                 <section>
                     <div className='studios-cyties'>
                         <img src="../../public/images/studios/Group 28.png" alt="" />
-                        <Dropdown>
+                        <Dropdown className='cyties-dropDown'>
                             <Dropdown.Toggle id="dropdown-basic">
                                 استان
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">سلام</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2"> سلام</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3"> سلام</Dropdown.Item>
+                                {Allprovinces.map(data=>(
+                                     <Dropdown.Item href="#/action-1">{data}</Dropdown.Item>  
+                                ))}
+                             
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
@@ -42,9 +45,9 @@ export default function Studios() {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">سلام</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">سلام </Dropdown.Item>
-                                <Dropdown.Item href="#/action-3"> سلام</Dropdown.Item>
+                                <Dropdown.Item href="#/action-1">حرفه ای </Dropdown.Item>
+                                <Dropdown.Item href="#/action-2"> خانگی</Dropdown.Item>
+                       
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
@@ -57,9 +60,9 @@ export default function Studios() {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">سلام</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">سلام </Dropdown.Item>
-                                <Dropdown.Item href="#/action-3"> سلام</Dropdown.Item>
+                                <Dropdown.Item href="#/action-1">دارد</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">ندارد </Dropdown.Item>
+                               
                             </Dropdown.Menu>
                         </Dropdown>
                 </div>

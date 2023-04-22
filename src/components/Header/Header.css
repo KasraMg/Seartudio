@@ -1,6 +1,6 @@
 .main_header{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     flex-direction: row-reverse;
 }
@@ -51,5 +51,11 @@ width: 240px;
         padding: 0.5rem 1rem 0.5rem 1rem !important;
     }.login-btn{
         width: 100% !important;
+    }.main_header img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }.main_header a{
+        width: 100%;
     }
 }
