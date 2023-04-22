@@ -217,6 +217,32 @@
 .studio-type-dropDown .dropdown-toggle{
     background-image: url(../../../public/images/signup/Vector5.png); 
 }
+.rules-div{
+    background-color: #EC4141 !important;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    border-radius: 50px;
+    width: 100%;
+    padding: 10px 3% 10px 10%;
+    
+}
+.rules-div img{
+    position:absolute;
+    top: 15px;
+    width: 29px;
+    left: 18px;
+}
+.rules-div p{
+    position: relative;
+    top: 6px;
+}
+.rules-div a{
+    color: black;
+    text-decoration: none;
+}
+.rules-div a:hover{
+    color: black;
+}
 .create-studio .dropdown-toggle{
     background-color: #EC4141 !important;
   color: rgba(255, 255, 255, 0.5);
@@ -299,12 +325,6 @@
     font-family: lalezar;
     z-index: 100;
     background-color: transparent;
-}
-.rules-input{
-    background-image: url(../../../public/images/signup/Rectangle\ 39.png);
-    padding-right: 1.2rem !important;
-    background-position: 16px 9px !important;
-    background-size: 29px 31px !important;  
 }
 
 .create-studio-btn{

@@ -4,6 +4,7 @@ import './SignUp.css'
 import provinces from '../Studios/data';
 import Header from '../../components/Header/Header'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 export default function SignUp() {
   const [Allprovinces, setAllProvinces] = useState(provinces)
   return (
@@ -84,7 +85,11 @@ export default function SignUp() {
           </div>
          
           <input type="text" placeholder='رمز عبور' />
-          <input disabled="disabled" className='rules-input' type="text" placeholder='شرایط و قوانین سرتودیو را میپذیرم' />
+          <div className='rules-div'>
+                <p><Link to='/rules'>شرایط و قوانین</Link> سرتودیو را میپذیرم </p>
+                <img src="../../public/images/signup/Rectangle 39.png" alt="Logo" />
+          </div>
+      
 
        
           
