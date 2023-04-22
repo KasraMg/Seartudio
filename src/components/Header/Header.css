@@ -49,5 +49,7 @@ width: 240px;
         align-items: baseline;
     }.main_header button {
         padding: 0.5rem 1rem 0.5rem 1rem !important;
+    }.login-btn{
+        width: 100% !important;
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import IndexStudioSection from '../../components/IndexStudioSection/IndexStudioSection'
+import IntroStudioSection from '../../components/IntroStudioSection/IntroStudioSection'
 import './Index.css'
 export default function Index() {
     return (
@@ -36,12 +36,12 @@ export default function Index() {
 
                 <main>
                 
-               <IndexStudioSection/>
-               <IndexStudioSection/>
+               <IntroStudioSection/>
+               <IntroStudioSection/>
 
-               <IndexStudioSection/>
-               <IndexStudioSection/>
-               <IndexStudioSection/>
+               <IntroStudioSection/>
+               <IntroStudioSection/>
+               <IntroStudioSection/>
 
                     <button>بیشتر</button>
                 </main>

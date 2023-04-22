@@ -1,12 +1,12 @@
 import React from 'react'
-import './IndexStudioSection.css'
-export default function IndexStudioSection() {
+import './IntroStudioSection.css'
+export default function IntroStudioSection() {
   return (
-    <section className='index-studio'>
-    <img src="../../public/images/index/Mask group.png" className='index-studio-absolute-img' alt="" />
-    <div className='index-studio-title'>
+    <section className='Intro-Studio-Section'>
+    <img src="../../public/images/index/Mask group.png" className='Intro-Studio-Section-absolute-img' alt="" />
+    <div className='Intro-Studio-Section-title'>
         <p >استودیو مزدک</p>
-        <img className='index-studios-section-title-img-1' src="../../public/images/index/🦆 icon _voice ok_.png" alt="" />
+        <img className='Intro-Studio-section-title-img-1' src="../../public/images/index/🦆 icon _voice ok_.png" alt="" />
         <div style={{position:'relative',left:'15px'}}>
               <img className='pb-2 verify-icon-1' src="../../public/images/index/Vector.png" alt="" />
               <img className='pb-2 verify-icon-2' src="../../public/images/index/Vector1.png" alt="" />
@@ -14,17 +14,17 @@ export default function IndexStudioSection() {
       
     </div>
 
-    <div className='index-studio-details'>
-        <div className='index-studio-description'>
+    <div className='Intro-Studio-Section-details'>
+        <div className='Intro-Studio-Section-description'>
             <p className='mb-1'>توضیحات:</p>
             <p>یک متن توضیح برای استودیو  بالا این متن الکیه بخدا</p>
         </div>
-        <div className='index-studio-details-section-2'>
-           <div className='index-studio-price'>
+        <div className='Intro-Studio-Section-details-section-2'>
+           <div className='Intro-Studio-Section-price'>
             <img src="../../public/images/index/🦆 icon _money square_.png" alt="" />
             <p>  ۱۰۰،۰۰۰ ت</p>
            </div>
-           <div className='index-studio-city'>
+           <div className='Intro-Studio-Section-city'>
            <img src="../../public/images/index/🦆 icon _globe_.png" alt="" />
             <p> قزوین</p>
            </div>

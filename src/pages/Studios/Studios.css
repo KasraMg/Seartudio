@@ -1,0 +1,161 @@
+.Studios{
+    padding: 0rem 14rem;
+}
+@media (max-width:1260px) {
+    .Studios{
+        padding: 0rem 2rem;
+    }
+}
+@media (max-width:700px) {
+    .Studios{
+        padding: 0rem 1rem !important;
+    }
+}
+
+.how-find-studio{
+    background: linear-gradient(112.88deg, #CD6767 -4.69%, #484848 81.23%);
+border-radius: 50px;
+width: 100%;
+margin-top: 5rem;
+padding-bottom: 2rem;
+margin-bottom: 4rem;
+}
+
+.how-find-studio-title{
+    font-size: 50px;
+    text-align: center;
+    direction: rtl;
+    padding-top: 2rem;
+    color: white;
+    font-family: lalezar;
+}
+.how-find-studio img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.how-find-studio-details{
+    font-size: 25px;
+    font-family: lalezar;
+    color: white;
+    direction: rtl;
+    padding-right: 22%;
+}
+.studios-cyties,
+.studios-type{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 30px;
+    
+}
+.how-find-studio section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0rem 6rem;
+    justify-content: space-around;
+}
+.how-find-studio .dropdown-toggle{
+    background-color: #D9D9D9 !important;
+    color: black !important;
+    font-family: lalezar;
+    border: none !important;
+    box-shadow: none !important;
+    width: 195px;
+    text-align: right;
+
+    padding: 10px 10%;
+    border-radius: 50px;
+}
+.how-find-studio .dropdown-toggle:hover{
+    background-color: #D9D9D9;
+    color: black;
+}
+.how-find-studio .dropdown-toggle:hover,
+.how-find-studio .dropdown-toggle:active,
+.how-find-studio .dropdown-toggle:focus-visible {
+    background-color: #D9D9D9 !important;
+    color: black !important;
+    border: none !important;
+}
+
+.how-find-studio .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    position: absolute;
+    top: 16px;
+    left: 22px;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.how-find-studio .dropdown-toggle::after {
+
+    background-image: url(/public/images/studios/Vector1.png);
+    border: none !important;
+    background-size: 23px 14px;
+    display: inline-block;
+    margin-left: 0.255em;
+    width: 76px;
+    vertical-align: 0.255em;
+    height: 45px;
+    position: absolute;
+    top: 14px;
+    left: 22px;
+    content: "";
+    background-repeat: no-repeat;
+}
+.how-find-studio  .dropdown-menu{
+    inset: 0px 4px auto 0px !important;
+    text-align: right;
+    font-family: lalezar;
+}
+.studios-licens{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 2rem;
+    align-items: center;
+}
+@media (max-width:900px) {
+    .how-find-studio section {
+        flex-direction: column;
+        padding: 0rem ;
+        justify-content: center;
+    }.studios-cyties, .studios-type {
+        justify-content: center;
+        margin-top: 1rem ;
+    }.studios-licens{
+        margin-top: 1rem ;
+    }.how-find-studio .dropdown-toggle{
+        width: 300px;
+    }
+}
+
+@media (max-width:767px) {
+    .how-find-studio-details {
+        padding-right: 44px;
+    }.how-find-studio-title {
+        font-size: 38px;
+        padding: 1rem .5rem;
+        margin-bottom: 2rem;
+    }.how-find-studio .dropdown-toggle{
+        width: 195px;
+    }.how-find-studio {
+        border-radius: 15px !important;
+    }
+}
+@media (max-width:350px) {
+    .studios-cyties, .studios-type {
+        flex-direction: column;
+        margin-top: 2rem ;
+    }.studios-licens {
+        flex-direction: column;
+        margin-top:2rem ;
+    }
+}

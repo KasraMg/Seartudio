@@ -1,9 +1,9 @@
-.index-studio-absolute-img{
+.Intro-Studio-Section-absolute-img{
     position: absolute;
    height: 218px;
     }
 
-.index-studio-title{
+.Intro-Studio-Section-title{
     font-family: lalezar;
 font-size: 39px;
 display: flex;
@@ -13,11 +13,11 @@ align-items: baseline;
 gap: 10px;
 }
 @media (min-width:991px) {
-    .index-studio-absolute-img{
+    .Intro-Studio-Section-absolute-img{
        
         right: -12px;
        top: 0px;
-    }.index-studio{
+    }.Intro-Studio-Section{
   
         padding-right: 18rem;
  
@@ -25,52 +25,52 @@ gap: 10px;
    
         margin-bottom: 3rem;
         
-    }.index-studio-details{
+    }.Intro-Studio-Section-details{
         justify-content: space-between;
         padding-left: 9rem;
     }
 }
 @media (max-width:990px) {
-    .index-studio {
+    .Intro-Studio-Section {
       margin-top: 8rem;
          padding-right:0rem;
         
         padding-top:8rem;
  
-    }.index-studio-absolute-img{
+    }.Intro-Studio-Section-absolute-img{
         top: -102px;
         left: 36%;
         width: 190px;
         height: 190px;
         right: 0px;
-    }.index-studio-title{
+    }.Intro-Studio-Section-title{
        padding-right: 4rem;
         padding-bottom: 1rem;
-    }.index-studio-details{
+    }.Intro-Studio-Section-details{
         justify-content: space-around;
         padding-bottom: 16px;
-    }.index-studio-details {
+    }.Intro-Studio-Section-details {
         padding-left: 3rem;
-    }.index-studio-city img{
+    }.Intro-Studio-Section-city img{
         position: relative;
         bottom: 5px;
     }
 }
 
 @media (max-width:700px) {
-    .index-studio-details {
+    .Intro-Studio-Section-details {
         flex-direction: column !important;
         padding-right: 2rem;
-    }.index-studio-absolute-img{
+    }.Intro-Studio-Section-absolute-img{
         width: 170px !important;
         height: 170px !important;
         left: 32% !important;
     }
-    .index-studio-description p {
+    .Intro-Studio-Section-description p {
         width: 100% !important;
-    }.index-studio-title {
+    }.Intro-Studio-Section-title {
         padding-right: 2rem !important;
-    }.index-studio-details-section-2{
+    }.Intro-Studio-Section-details-section-2{
        display: flex;
         justify-content: space-between;
         align-items: center;
@@ -78,23 +78,23 @@ gap: 10px;
     }
 }
 @media (max-width:424px) {
-    .index-studio-details-section-2{
+    .Intro-Studio-Section-details-section-2{
         flex-direction: column;
         align-items: unset !important;
-    }.index-studio-title {
+    }.Intro-Studio-Section-title {
         font-size: 1.6rem !important;
         padding-right: 1rem !important;
-    } .index-studio-details {
+    } .Intro-Studio-Section-details {
         padding-right:1rem !important;
-    }.index-studio{
+    }.Intro-Studio-Section{
         padding-top: 6rem !important;
-    }.index-studio-absolute-img{
+    }.Intro-Studio-Section-absolute-img{
         
         left: 28% !important;
     }
 }
 @media (max-width:350px) {
-    .index-studio-absolute-img{
+    .Intro-Studio-Section-absolute-img{
         
         left: 22% !important;
     }
@@ -104,7 +104,7 @@ gap: 10px;
     right: 32px;
 }
 
-.index-studios-section-title-img-1{
+.Intro-Studio-section-title-img-1{
     position: relative;
     top: 15px;
     width: 40px;
@@ -114,33 +114,33 @@ gap: 10px;
 .verify-icon-1{
     width: 42px;
 }
-.index-studio-details{
+.Intro-Studio-Section-details{
     display: flex;
     flex-direction: row-reverse;
     text-align: right;
     
 }
 
-.index-studio-price,
-.index-studio-city{
+.Intro-Studio-Section-price,
+.Intro-Studio-Section-city{
     display: flex;
     align-items: flex-start;
     flex-direction: row-reverse;
     gap: 10px;
 }
-.index-studio-price p,
-.index-studio-city p{
+.Intro-Studio-Section-price p,
+.Intro-Studio-Section-city p{
 direction: rtl;
 font-family: lalezar;
 }
-.index-studio-price{
+.Intro-Studio-Section-price{
     font-size: 35px;
 }
-.index-studio-city{
+.Intro-Studio-Section-city{
     font-size: 20px;
 }
 
-.index-studio-description p{
+.Intro-Studio-Section-description p{
     font-family: lalezar;
 direction: rtl;
 font-size: 23px;
@@ -148,7 +148,7 @@ width: 324px;
 
 }
 
-.index-studio{
+.Intro-Studio-Section{
     background: #767676;
     color: white;
     border-radius: 50px;
