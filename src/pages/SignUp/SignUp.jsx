@@ -43,9 +43,9 @@ export default function SignUp() {
 
             </Dropdown.Menu>
           </Dropdown>
-          <div className='telegram-input'>
+          
             <input type="text" placeholder='قیمت (بر اساس ساعت و انگلیسی)' />
-          </div>
+          
           
           <Dropdown className='licens-dropDown'>
             <Dropdown.Toggle id="dropdown-basic">
@@ -58,7 +58,9 @@ export default function SignUp() {
 
             </Dropdown.Menu>
           </Dropdown>
+          <div  className='telegram-input'>
           <input type="text" placeholder='شناسه تلگرامی' />
+          </div>
           <Dropdown className='studio-type-dropDown'>
             <Dropdown.Toggle id="dropdown-basic">
               نوع استودیو
