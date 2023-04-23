@@ -8,6 +8,7 @@ import Studios from "./pages/Studios/Studios";
 import SignUp from "./pages/SignUp/SignUp";
 import StudioPanel from "./pages/StudioPanel/StudioPanel";
 import AdminPanel from "./pages/AdminPanel/AdminPanel";
+import StudioPage from "./pages/StudioPage/StudioPage";
 const routes = [
   { path: "/", element: <Index /> },
   { path: "/Rules", element: <Rules /> },
@@ -18,6 +19,7 @@ const routes = [
   { path: "/SignUp", element: <SignUp /> },
   { path: "/StudioPanel", element: <StudioPanel /> },
   { path: "/AdminPanel", element: <AdminPanel /> },
+  { path: "/StudioPage", element: <StudioPage /> },
   
 ];
 
