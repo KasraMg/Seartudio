@@ -4,6 +4,13 @@ import Modal from 'react-bootstrap/Modal';
 import './Modal.css'
 export default function MyVerticallyCenteredModal({onHide,children,show}) {
     return (
+      <>
+      {show &&(
+       <div className='modal-background' onClick={onHide}></div> 
+      )}
+
+
+
       <Modal
       show={show}
         size="lg"
@@ -21,6 +28,7 @@ export default function MyVerticallyCenteredModal({onHide,children,show}) {
         </Modal.Body>
        
       </Modal>
+      </>
     );
   }
   
