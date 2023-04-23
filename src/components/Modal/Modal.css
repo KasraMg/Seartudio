@@ -1,0 +1,33 @@
+.modal-dialog{
+    width: 450px !important;
+  
+}
+.modal-content{
+    background: #EBEBEB !important;
+    box-shadow: 13px 12px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 52px !important;
+}
+.modal-header img{
+    width: 50px ;
+}
+.modal-header img:nth-child(2){
+    cursor: pointer;
+}
+.modal-header {
+    border-bottom: 0px !important;
+}
+.modal-body p{
+    text-align: center;
+    font-family: lalezar;
+    font-size: 25px;
+}
+.modal-body{
+    padding-top: 0px !important;
+}
+.modal-body a{
+    text-decoration: none;
+    color: #FF0000;
+}
+.modal-body a:hover{
+    color: #FF0000;
+}

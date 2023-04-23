@@ -1,0 +1,52 @@
+.StudioPanelHeader{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.StudioPanelHeader section{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.create-studio-btn{
+background-color: #FF0000;
+color: white;
+border: none;
+}
+
+
+.StudioPanelHeader button{
+    border-radius: 30px;
+    padding: .5rem 2rem .5rem 2rem;
+    font-family: lalezar;
+    font-size: 1.2rem;
+}
+.StudioPanelHeader img{
+ height: 114px;
+width: 240px;
+}
+
+@media (max-width:700px) {
+    .StudioPanelHeader{
+        flex-direction: column;
+    }
+    .StudioPanelHeader button{
+        width: 100%;
+        font-size: 1rem !important;
+    }  
+    .StudioPanelHeader section {
+        width: 100%;
+        align-items: baseline;
+    }.StudioPanelHeader button {
+        padding: 0.5rem 1rem 0.5rem 1rem !important;
+    }.login-btn{
+        width: 100% !important;
+    }.StudioPanelHeader img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }.StudioPanelHeader a{
+        width: 100%;
+    }
+}

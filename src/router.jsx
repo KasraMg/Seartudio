@@ -6,6 +6,7 @@ import NotFound from "./pages/404/404";
 import Login from "./pages/Login/Login";
 import Studios from "./pages/Studios/Studios";
 import SignUp from "./pages/SignUp/SignUp";
+import StudioPanel from "./pages/StudioPanel/StudioPanel";
 const routes = [
   { path: "/", element: <Index /> },
   { path: "/Rules", element: <Rules /> },
@@ -14,6 +15,7 @@ const routes = [
   { path: "/Login", element: <Login /> },
   { path: "/Studios", element: <Studios /> },
   { path: "/SignUp", element: <SignUp /> },
+  { path: "/StudioPanel", element: <StudioPanel /> },
   
 ];
 

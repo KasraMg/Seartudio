@@ -6,7 +6,7 @@ export default function Header() {
         <header className='main_header'>
             <Link to="/"><img src="../../public/images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
             <section>
-                <button className='create-studio-btn'>ثبت استدویو</button>
+            <Link style={{textDecoration:'none'}} to='/signup'><button className='create-studio-btn'>ثبت استدویو</button></Link>
                <Link className='login-btn' to='/Login'> <button>ورود</button></Link>
             </section>
         </header>

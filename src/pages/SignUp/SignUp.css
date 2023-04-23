@@ -81,6 +81,8 @@
         height: 27px !important;
         left: 0px !important;
         right: 55px;
+    }.telegram-input img{
+        left: 24px !important;
     }
 }
 @media (max-width:350px) {
@@ -163,36 +165,7 @@
 .create-studio input:nth-child(9){
     background-image: url(../../../public/images/signup/Vector4.png);
 }
-.file-input-parent::after{
-    background-image: url(../../../public/images/signup/Group\ 326.png);
-    background-position: center;
-    background-size: 27px 25px;
-    display: table-column;
-    margin-left: 2.255em;
-    width: 28px;
-    position: absolute;
-    vertical-align: 0.255em;
-    content: "";
-    top: 12px;
-    left: -22px;
-    height: 29px;
-    background-repeat: no-repeat;
-}
-.telegram-input::after{
-    background-image: url(../../../public/images/signup/Group\ 326.png);
-    background-position: center;
-    background-size: 27px 25px;
-    display: table-column;
-    margin-left: 2.255em;
-    width: 28px;
-    position: absolute;
-    vertical-align: 0.255em;
-    content: "";
-    top: 12px;
-    left: -22px;
-    height: 29px;
-    background-repeat: no-repeat;
-}
+
 .create-studio input:nth-child(10){
     background-image: url(../../../public/images/signup/Vector5.png);
 }
@@ -288,7 +261,7 @@
     vertical-align: 0.255em;
     height: 45px;
     position: absolute;
-    top: 14px;
+    top: 18px;
     left: 22px;
     content: "";
     background-repeat: no-repeat;
@@ -359,5 +332,24 @@
     border-radius: 30px;
     background: #D9D9D9;
     padding-top: .2rem;
+    cursor: pointer;
     margin-left: 1rem;
+}
+
+.file-input-parent img{
+    position: absolute;
+    left: 13px;
+    width: 24px;
+    top: 15px;
+}
+.telegram-input img{
+    position: absolute;
+    left: 13px;
+    width: 24px;
+    top: 13px;
+}
+.file-input-parent img:hover,
+.telegram-input img:hover{
+    opacity: .7;
+    cursor: pointer;
 }
