@@ -15,7 +15,7 @@ export default function StudioPanel() {
   }
   return (
     <div className='StudioPanel '>
-        <StudioPanelHeader/>
+        <StudioPanelHeader title='مدیریت استودیو'/>
 
     <div className='StudioPanel-status' dir='rtl'>
     <p>وضعیت استودیو شما:</p>

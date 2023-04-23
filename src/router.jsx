@@ -7,6 +7,7 @@ import Login from "./pages/Login/Login";
 import Studios from "./pages/Studios/Studios";
 import SignUp from "./pages/SignUp/SignUp";
 import StudioPanel from "./pages/StudioPanel/StudioPanel";
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
 const routes = [
   { path: "/", element: <Index /> },
   { path: "/Rules", element: <Rules /> },
@@ -16,6 +17,7 @@ const routes = [
   { path: "/Studios", element: <Studios /> },
   { path: "/SignUp", element: <SignUp /> },
   { path: "/StudioPanel", element: <StudioPanel /> },
+  { path: "/AdminPanel", element: <AdminPanel /> },
   
 ];
 

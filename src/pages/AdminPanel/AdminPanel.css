@@ -1,0 +1,47 @@
+.AdminPanel{
+    padding: 0rem 14rem;
+}
+@media (max-width:1260px) {
+    .AdminPanel{
+        padding: 0rem 2rem;
+    }
+}
+@media (max-width:700px) {
+    .AdminPanel{
+        padding: 0rem 1rem !important;
+    }
+}
+
+.AdminPanel main .AdminPanel-formCheck{
+    padding: .5rem 1rem;
+
+    font-family: lalezar;
+    font-size: 21px;
+     border-radius:10px !important ;
+}
+.AdminPanel-formCheck .form-check-input{
+    margin-left: 0rem !important;
+    margin-right: .5rem;
+   
+}
+.AdminPanel main {
+    direction: rtl;
+}
+.AdminPanel-formCheck:nth-child(2){
+ 
+}
+.AdminPanel-formCheck:nth-child(1){
+  
+   
+}
+.AdminPanel-formCheck:nth-child(3){
+
+    }
+
+    .AdminPanel-studios-title{
+        text-align: right;
+        font-family: lalezar;
+        font-size: 30px;
+        margin-top: 4rem;
+        direction: rtl;
+    }
