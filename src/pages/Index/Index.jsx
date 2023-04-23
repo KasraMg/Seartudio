@@ -15,7 +15,7 @@ export default function Index() {
                     <p>استودیوت رو ثبت کن!</p>
                     <span>با ثبت استودیو خودت توی <strong> سرتودیو </strong>
                         خودت به آرتیست ها معرفی کن </span>
-                    <button>بزن بریم</button>
+                    <Link to='/SignUp'><button>بزن بریم</button></Link>
                 </div>
 
                 <img src="../../public/images/index/rafiki.png" alt="" />
@@ -26,7 +26,7 @@ export default function Index() {
                     <p>استودیوت رو پیدا کن!</p>
                     <span>استدیو مناسب خودت رو با فیلتر های <strong> سرتودیو </strong>
                         پیدا کن و باهاشون همکاری کن</span>
-                    <button>بزن بریم</button>
+                    <Link to='/Studios'><button>بزن بریم</button></Link>
                 </div>
 
                 <img src="../../public/images/index/bro.png" alt="" />

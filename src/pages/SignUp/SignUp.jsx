@@ -27,7 +27,7 @@ export default function SignUp() {
         <div>
           <p>در معرض دید باش</p>
           <p>خودتو رو به صدها ارتیست نشون بده درامدتو افزایش بده!</p>
-          <span>!توضیحات کامل ثبت استودیو رو از <a href="">اینجا</a> ببین</span>
+          <span>!توضیحات کامل ثبت استودیو رو از <a href='https://t.me/seartudio_support'>اینجا</a> ببین</span>
         </div>
 
         <img src="../../public/images/signup/Group 29.png" alt="" />

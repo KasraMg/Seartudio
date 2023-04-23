@@ -8,8 +8,12 @@ import { Link } from 'react-router-dom';
 import MyVerticallyCenteredModal from '../../components/Modal/Modal';
 export default function StudioPanel() {
   const [Allprovinces, setAllProvinces] = useState(provinces)
+  
+  const [TelgramModalShow, setTelgramModalShow] = React.useState(false);
   const [StudioModalShow, setStudioModalShow] = React.useState(false);
-
+  const TelegramonHide=()=>{
+    setTelgramModalShow(false)
+  }
   const StudioonHide=()=>{
     setStudioModalShow(false)
   }
@@ -71,11 +75,12 @@ export default function StudioPanel() {
             </Dropdown.Menu>
           </Dropdown>
 
-      <div className='file-input-parent'>
-          <input type="file" className='logo-input' dir='ltr' placeholder='تصویر لوگو' />
-               <p className='sign-up-logo-span'>تصویر لوگو</p>
-                <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+  
+          <div  className='telegram-input'>
+          <input type="text" placeholder='شناسه تلگرامی' />
+          <img   onClick={() => setTelgramModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
           </div>
+
           <Dropdown className='studio-type-dropDown'>
             <Dropdown.Toggle id="dropdown-basic">
               نوع استودیو
@@ -87,7 +92,11 @@ export default function StudioPanel() {
 
             </Dropdown.Menu>
           </Dropdown>
-          
+              <div className='file-input-parent'>
+          <input type="file" className='logo-input' dir='ltr' placeholder='تصویر لوگو' />
+               <p className='sign-up-logo-span'>تصویر لوگو</p>
+                <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+          </div>
           
           
           <div className='file-input-parent'>
@@ -99,7 +108,18 @@ export default function StudioPanel() {
       
       
         
-
+          <MyVerticallyCenteredModal 
+       show={TelgramModalShow}
+       onHide={TelegramonHide}>
+      <p>
+      شناسه تلگرامی خود را از ربات:
+      <br />
+<a href="https://t.me/seartudio_support">@seartudio_bot</a>
+<br />
+دریافت کنید و در این قسمت وارد کنید
+      </p>
+      </MyVerticallyCenteredModal>
+          
      
       <MyVerticallyCenteredModal 
        show={StudioModalShow}

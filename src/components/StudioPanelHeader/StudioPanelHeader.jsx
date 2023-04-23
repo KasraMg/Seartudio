@@ -6,7 +6,7 @@ export default function StudioPanelHeader({title}) {
     <header className='StudioPanelHeader'>
     <Link to="/"><img src="../../public/images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
     <section>
-    <Link style={{textDecoration:'none'}} to='/signup'><button className='create-studio-btn'>پنل {title}</button></Link>    
+     <button className='create-studio-btn'>پنل {title}</button>
     </section>
 </header>
   )

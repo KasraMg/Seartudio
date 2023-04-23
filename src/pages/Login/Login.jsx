@@ -18,7 +18,7 @@ export default function Login() {
                 <div className='login-footer'>
                     
                     <p>قدرت گرفته از</p>
-                    <img src="../../public/images/similar/New Project (99) 3.png" alt="" />
+                    <a href="https://instagram.com/masir_business/"><img src="../../public/images/similar/New Project (99) 3.png" alt="" /></a>
                 </div>
             </main>
         </div>
