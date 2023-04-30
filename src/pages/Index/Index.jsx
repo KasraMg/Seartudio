@@ -1,10 +1,21 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import IntroStudioSection from '../../components/IntroStudioSection/IntroStudioSection'
 import { Link } from 'react-router-dom'
 import './Index.css'
 export default function Index() {
+const [studio,setStudio]=useState()
+
+
+    useEffect(() => {
+
+     fetch('https://api.seartudio.com/')
+     .then(res=>res.json())
+     .then(data=>setStudio(data.data))
+    
+    }, [])
+    
     return (
         <div className='index_page'>
             <Header />
@@ -36,13 +47,10 @@ export default function Index() {
                 <p className="index-studios-title">استودیو ها</p>
 
                 <main>
-
-                    <IntroStudioSection />
-                    <IntroStudioSection />
-
-                    <IntroStudioSection />
-                    <IntroStudioSection />
-                    <IntroStudioSection />
+            {studio && studio.map(data=>(
+                    <IntroStudioSection {...data} />
+            ))}
+                  
 
                     <Link style={{textDecoration:'none'}} to='/Studios'><button>بیشتر</button></Link>
                 </main>
