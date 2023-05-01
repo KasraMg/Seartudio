@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import Footer from '../../components/Footer/Footer';
 import './SignUp.css'
 import provinces from '../Studios/data';
 import Header from '../../components/Header/Header'
@@ -146,7 +146,7 @@ export default function SignUp() {
       </MyVerticallyCenteredModal>
           
    
-      
+      <Footer/>
     </div>
   )
 }

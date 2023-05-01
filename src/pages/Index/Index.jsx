@@ -20,8 +20,7 @@ const [studio,setStudio]=useState()
     return (
         <div className='index_page'>
             <Header />
-{studio ?(
-    <>
+
             <section className='index-intro'>
 
                 <div>
@@ -49,9 +48,13 @@ const [studio,setStudio]=useState()
                 <p className="index-studios-title">استودیو ها</p>
 
                 <main>
-            {studio.map(data=>(
-                    <IntroStudioSection {...data} />
-            ))}
+            {studio ? (
+                studio.map(data=>(
+                         <IntroStudioSection {...data} />
+                   ))  
+            ):(
+               <Loader/>
+            )}
                   
 
                     <Link style={{textDecoration:'none'}} to='/Studios'><button>بیشتر</button></Link>
@@ -75,11 +78,7 @@ const [studio,setStudio]=useState()
                 </div>
             </section>
 
-       </>
-
-):(
-   <Loader/> 
-)}     <Footer />
+     <Footer />
         </div>
     )
 }

@@ -10,11 +10,11 @@ export default function StudioPage() {
     useEffect(() => {
         fetch(`https://api.seartudio.com/studio/id/${studioId.id}`)
             .then(res => res.json())
-            .then(data =>{
-            setStudioData(data.data)
-            console.log(data.data);
-            } )
-      
+            .then(data => {
+                setStudioData(data.data)
+                console.log(data.data);
+            })
+
     }, [])
 
     return (
@@ -28,14 +28,26 @@ export default function StudioPage() {
                             <div>
 
                                 <p className='studio-page-title'> {studioData.name}</p>
-                                <img src='./../public/images/index/🦆 icon _voice ok_.png' crossOrigin='anonymous' alt="" />
+
+                                {studioData.isPromoted && (
+                                    <img src='./../public/images/index/🦆 icon _voice ok_.png' crossOrigin='anonymous' alt="" />
+                                )}
+                                {studioData.isVeryfied && (
+
+                                        <img className='mx-2' src="../../public/images/similar/Group 38.png" alt="" />
+
+                                 
+                                )}
+                               
+                           
+                           
                             </div>
                             <p>توضیحات:</p>
                             <p>{studioData.description}</p>
                         </div>
 
 
-                        <img src={studioData.logo} className='studio-page-logo' crossOrigin='anonymous' style={{borderRadius:'30px'}} alt="" />
+                        <img src={studioData.logo} className='studio-page-logo' crossOrigin='anonymous' style={{ borderRadius: '30px' }} alt="" />
                     </section>
 
                     <div className="studio-details">
@@ -63,7 +75,7 @@ export default function StudioPage() {
                                 <img src="../../public/images/studiopage/Vector5.png" alt="" />
                             </div>
                             <div>
-                                <p>{studioData.pricePerHour}</p>
+                                <p>{Intl.NumberFormat().format(studioData.pricePerHour)}</p>
                                 <img src="../../public/images/studiopage/Group 32.png" alt="" />
                             </div>
                             <div>
@@ -75,12 +87,12 @@ export default function StudioPage() {
 
                     <div className="studio-image" dir='rtl'>
                         <p className="studio-image-title">تصویر:</p>
-                        <img src={studioData.image} crossOrigin='anonymous'  alt="" />
+                        <img src={studioData.image} crossOrigin='anonymous' alt="" />
                     </div>
                 </>
-              
-            ):(
-                <Loader/>
+
+            ) : (
+                <Loader />
             )}
 
             <Footer />
