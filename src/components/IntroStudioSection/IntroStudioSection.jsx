@@ -1,9 +1,16 @@
 import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
 import './IntroStudioSection.css'
+import { Link } from 'react-router-dom'
+
 export default function IntroStudioSection(props) {
-  return (
+  const [img,setImg]=useState()
+
+return (
     <section className='Intro-Studio-Section'>
-      <img src={props.logo} className='Intro-Studio-Section-absolute-img' alt="" />
+      <Link to={`/StudioPage/${props.studioId}`}>
+      <img src={props.logo} crossOrigin='anonymous' className='Intro-Studio-Section-absolute-img' alt="" />
       <div className='Intro-Studio-Section-title'>
         <p >{props.name}</p>
         {props.isPromoted && (  
@@ -39,6 +46,7 @@ export default function IntroStudioSection(props) {
           </div>
         </div>
       </div>
+      </Link>
     </section>
   )
 }

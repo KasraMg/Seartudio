@@ -19,7 +19,7 @@ const routes = [
   { path: "/SignUp", element: <SignUp /> },
   { path: "/StudioPanel", element: <StudioPanel /> },
   { path: "/AdminPanel", element: <AdminPanel /> },
-  { path: "/StudioPage", element: <StudioPage /> },
+  { path: "/StudioPage/:id", element: <StudioPage /> },
   
 ];
 

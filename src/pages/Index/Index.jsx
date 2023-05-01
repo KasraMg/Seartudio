@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import IntroStudioSection from '../../components/IntroStudioSection/IntroStudioSection'
 import { Link } from 'react-router-dom'
 import './Index.css'
+import Loader from '../../components/Loader/Loader'
 export default function Index() {
 const [studio,setStudio]=useState()
 
@@ -13,13 +14,14 @@ const [studio,setStudio]=useState()
      fetch('https://api.seartudio.com/')
      .then(res=>res.json())
      .then(data=>setStudio(data.data))
-    
+        console.log(studio);
     }, [])
-    
+  
     return (
         <div className='index_page'>
             <Header />
-
+{studio ?(
+    <>
             <section className='index-intro'>
 
                 <div>
@@ -47,7 +49,7 @@ const [studio,setStudio]=useState()
                 <p className="index-studios-title">استودیو ها</p>
 
                 <main>
-            {studio && studio.map(data=>(
+            {studio.map(data=>(
                     <IntroStudioSection {...data} />
             ))}
                   
@@ -73,7 +75,11 @@ const [studio,setStudio]=useState()
                 </div>
             </section>
 
-            <Footer />
+       </>
+
+):(
+   <Loader/> 
+)}     <Footer />
         </div>
     )
 }

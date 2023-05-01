@@ -1,6 +1,10 @@
 .StudioPage{
     padding: 0rem 14rem;
 }
+.studio-page-logo{
+    height: 300px;
+    object-fit: cover;
+}
 @media (max-width:1260px) {
     .StudioPage{
         padding: 0rem 2rem;
@@ -82,7 +86,7 @@ justify-content: right;
 }
 @media (max-width:990px) {
     .StudioPage-top-section{
-       gap: 10px;
+       gap: 34px;
     }
     .StudioPage-top-section img{
         width: 300px;
@@ -110,7 +114,13 @@ justify-content: right;
     }.studio-details main div p {
         width: 215px;
         text-align: center;
-    }   
+    }   .studio-page-logo{
+        height: 100% !important;
+    }.studio-page-title{
+        font-size: 2.4rem;
+    }.studio-image img {
+        height: 100% !important;
+        }
 }
 
 @media (max-width:500px) {
@@ -140,11 +150,15 @@ justify-content: right;
     text-align: right;
     font-size: 26px;
     margin-top: 3rem;
+    
 }
 .studio-image img{
     display: block;
     margin-left: auto;
+    height: 500px;
     margin-right: auto;
     margin-top: 4rem;
+    border-radius: 30px;
     width: 100%;
+    object-fit: cover;
 }

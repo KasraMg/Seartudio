@@ -1,6 +1,8 @@
 .Intro-Studio-Section-absolute-img{
     position: absolute;
-   height: 218px;
+   height: 208px;
+   width: 217px;
+   border-radius: 30px;
     }
 
 .Intro-Studio-Section-title{
@@ -12,14 +14,21 @@ flex-direction: row-reverse;
 align-items: baseline;
 gap: 10px;
 }
+.Intro-Studio-Section a{
+    text-decoration: none;
+    color: white;
+}
+.Intro-Studio-Section a:hover{
+    color: white;
+}
 @media (min-width:991px) {
     .Intro-Studio-Section-absolute-img{
-       
+       height: 100% !important;
         right: -12px;
        top: 0px;
     }.Intro-Studio-Section{
   
-        padding-right: 18rem;
+        padding-right: 15rem !important;
  
         padding-top: 1rem;
    
@@ -44,8 +53,10 @@ gap: 10px;
         height: 190px;
         right: 0px;
     }.Intro-Studio-Section-title{
-       padding-right: 4rem;
+        padding-right: 1.8rem !important;
         padding-bottom: 1rem;
+        justify-content: right !important;
+        padding-left: 1rem !important;
     }.Intro-Studio-Section-details{
         justify-content: space-around;
         padding-bottom: 16px;
@@ -75,6 +86,14 @@ gap: 10px;
         justify-content: space-between;
         align-items: center;
         padding-top: 1rem;
+    }.Intro-Studio-Section-title p{
+        margin: 0rem auto;
+    }.Intro-Studio-section-title-img-1 {
+        margin: 0rem auto;
+        top: 4px !important;
+        left: 5px;
+    }.Intro-Studio-Section-price {
+        font-size: 30px !important;
     }
 }
 @media (max-width:424px) {

@@ -1,67 +1,89 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './StudioPage.css'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { useParams } from 'react-router-dom'
+import Loader from '../../components/Loader/Loader'
 export default function StudioPage() {
-  return (
-    <div className='StudioPage'>
-        <Header/>
-        <section className='StudioPage-top-section'>
-            <div>
-    <div>
-        
-        <p> استودیو مزدک</p>
-        <img src="../../public/images/studiopage/Group 37.png" alt="" />
-    </div>
-    <p>توضیحات:</p>
-    <p>این یک متن توضیح کامل و عالی
-برای استودیو مورد نظر می باشد.</p>
-            </div>
-         
-           
-        <img src="../../public/images/studiopage/def-logo 2.png" alt="" />
-        </section>
+    const [studioData, setStudioData] = useState()
+    const studioId = useParams()
+    useEffect(() => {
+        fetch(`https://api.seartudio.com/studio/id/${studioId.id}`)
+            .then(res => res.json())
+            .then(data =>{
+            setStudioData(data.data)
+            console.log(data.data);
+            } )
+      
+    }, [])
 
-        <div className="studio-details">
-            <p className='studio-details-title'>مشخصات:</p>
-            <main>
-                <div>
-                    <p>شیراز</p>
-                    <img src="../../public/images/studiopage/Group 325.png" alt="" />
-                </div>
-                <div>
-                    <p>۰۱۲۳۴۵۶۷۸</p>
-                    <img src="../../public/images/studiopage/phone.png" alt="" />
-                </div>
+    return (
+        <div className='StudioPage'>
+            <Header />
 
-                <div>
-                    <p>مجوز ندارد</p>
-                    <img src="../../public/images/studiopage/Group 322.png" alt="" />
-                </div>
-                <div>
-                    <p>email@example.com</p>
-                    <img src="../../public/images/studiopage/Group 31.png" alt="" />
-                </div>
-                <div>
-                    <p>حرفه ای</p>
-                    <img src="../../public/images/studiopage/Vector5.png" alt="" />
-                </div>
-                <div>
-                    <p>100,000ت</p>
-                    <img src="../../public/images/studiopage/Group 32.png" alt="" />
-                </div>
-                <div>
-                    <p>فلان شهر بهمان استان و این حرفا.</p>
-                    <img src="../../public/images/studiopage/Vector.png" alt="" />
-                </div>
-            </main>
+            {studioData ? (
+                <>
+                    <section className='StudioPage-top-section'>
+                        <div>
+                            <div>
+
+                                <p className='studio-page-title'> {studioData.name}</p>
+                                <img src='./../public/images/index/🦆 icon _voice ok_.png' crossOrigin='anonymous' alt="" />
+                            </div>
+                            <p>توضیحات:</p>
+                            <p>{studioData.description}</p>
+                        </div>
+
+
+                        <img src={studioData.logo} className='studio-page-logo' crossOrigin='anonymous' style={{borderRadius:'30px'}} alt="" />
+                    </section>
+
+                    <div className="studio-details">
+                        <p className='studio-details-title'>مشخصات:</p>
+                        <main>
+                            <div>
+                                <p>{studioData.province}</p>
+                                <img src="../../public/images/studiopage/Group 325.png" alt="" />
+                            </div>
+                            <div>
+                                <p>{studioData.phoneNumber}</p>
+                                <img src="../../public/images/studiopage/phone.png" alt="" />
+                            </div>
+
+                            <div>
+                                <p> مجوز {studioData.license} </p>
+                                <img src="../../public/images/studiopage/Group 322.png" alt="" />
+                            </div>
+                            <div>
+                                <p>{studioData.email}</p>
+                                <img src="../../public/images/studiopage/Group 31.png" alt="" />
+                            </div>
+                            <div>
+                                <p> {studioData.type}</p>
+                                <img src="../../public/images/studiopage/Vector5.png" alt="" />
+                            </div>
+                            <div>
+                                <p>{studioData.pricePerHour}</p>
+                                <img src="../../public/images/studiopage/Group 32.png" alt="" />
+                            </div>
+                            <div>
+                                <p>{studioData.address}</p>
+                                <img src="../../public/images/studiopage/Vector.png" alt="" />
+                            </div>
+                        </main>
+                    </div>
+
+                    <div className="studio-image" dir='rtl'>
+                        <p className="studio-image-title">تصویر:</p>
+                        <img src={studioData.image} crossOrigin='anonymous'  alt="" />
+                    </div>
+                </>
+              
+            ):(
+                <Loader/>
+            )}
+
+            <Footer />
         </div>
-
-        <div className="studio-image" dir='rtl'>
-            <p className="studio-image-title">تصویر:</p>
-            <img src="../../public/images/studiopage/Rectangle 18.png" alt="" />
-        </div>
-        <Footer/>
-    </div>
-  )
+    )
 }
