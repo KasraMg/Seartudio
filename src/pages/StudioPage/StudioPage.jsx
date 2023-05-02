@@ -4,19 +4,30 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { useParams } from 'react-router-dom'
 import Loader from '../../components/Loader/Loader'
+import { Image, Shimmer } from 'react-shimmer'
 export default function StudioPage() {
     const [studioData, setStudioData] = useState()
     const studioId = useParams()
-    useEffect(() => {
+    const [isLoading, setIsLoading] = useState();
+
+    const getData = () => {
+        setIsLoading(true)
         fetch(`https://api.seartudio.com/studio/id/${studioId.id}`)
             .then(res => res.json())
             .then(data => {
                 setStudioData(data.data)
                 console.log(data.data);
+               
+                    setIsLoading(false)
+              
             })
+    }
+    useEffect(() => {
+        setIsLoading(true);
+        getData();
+    }, []);
 
-    }, [])
-
+   
     return (
         <div className='StudioPage'>
             <Header />
@@ -34,20 +45,28 @@ export default function StudioPage() {
                                 )}
                                 {studioData.isVeryfied && (
 
-                                        <img className='mx-2' src="../../public/images/similar/Group 38.png" alt="" />
+                                    <img className='mx-2' src="../../public/images/similar/Group 38.png" alt="" />
 
-                                 
+
                                 )}
-                               
-                           
-                           
+
+
+
                             </div>
                             <p>توضیحات:</p>
                             <p>{studioData.description}</p>
                         </div>
 
+                        {isLoading ? (
+                            <Image
+                           
+                                src='https://source.unsplash.com/random/800x600'
+                                fallback={<Shimmer className='StudioPage-top-section-shimmer' width={385} height={300} />}
+                            />
+                        ) : (
+                            <img src={studioData.logo}  className='studio-page-logo' crossOrigin='anonymous' style={{ borderRadius: '30px' }} alt="" />
+                        )}
 
-                        <img src={studioData.logo} className='studio-page-logo' crossOrigin='anonymous' style={{ borderRadius: '30px' }} alt="" />
                     </section>
 
                     <div className="studio-details">
@@ -87,7 +106,17 @@ export default function StudioPage() {
 
                     <div className="studio-image" dir='rtl'>
                         <p className="studio-image-title">تصویر:</p>
-                        <img src={studioData.image} crossOrigin='anonymous' alt="" />
+
+                        {isLoading ? (
+                            <Image
+                          
+                                src='https://source.unsplash.com/random/800x600'
+                                fallback={<Shimmer  className='studio-image-shimmer' width='100%' height={500} />}
+                            />
+                        ) : (
+                            <img src={studioData.image} crossOrigin='anonymous' alt="" />
+                        )}
+                  
                     </div>
                 </>
 

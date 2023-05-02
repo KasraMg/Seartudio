@@ -133,6 +133,13 @@ justify-content: right;
         justify-content: center;
         align-items: baseline;
         font-size: 44px;
+    }.StudioPage-top-section-shimmer,
+    .studio-image-shimmer{
+        width: 70% !important;
+        height: 150px !important;
+    }.studio-image-shimmer{
+        width: 100% !important;
+        height: 150px !important;
     }
 }
 @media (max-width:400px) {
@@ -161,4 +168,13 @@ justify-content: right;
     border-radius: 30px;
     width: 100%;
     object-fit: cover;
+}
+
+.StudioPage-top-section span,
+.studio-image span{
+    display: none !important;
+}
+.StudioPage-top-section-shimmer,
+.studio-image-shimmer{
+    border-radius: 30px;
 }
