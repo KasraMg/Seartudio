@@ -6,9 +6,13 @@
     background: #EBEBEB !important;
     box-shadow: 13px 12px 4px rgba(0, 0, 0, 0.25) !important;
     border-radius: 52px !important;
+    z-index: 999;
+    position: relative;
+    bottom: 41px;
 }
 .modal-header img{
     width: 50px ;
+    z-index: 999;
 }
 .modal-header img:nth-child(2){
     cursor: pointer;
@@ -38,8 +42,27 @@
     left: 0;
     height: 100vh;
     width: 100%;
-    z-index: 999;
+    z-index: 202;
 }
 .modal,.modal-backdrop{
-    z-index: 500 !important;
+    z-index: 200 !important;
+}
+.close-modal-icon{
+    width:35px;
+    display:block;
+    margin-left:auto;
+    margin-right:1rem;
+    cursor: pointer;
+}
+.modal {
+    z-index: 200 !important;
+}
+@media (max-width:528px) {
+    .modal-dialog{
+        width: 100% !important;
+    }.modal-content{
+        width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

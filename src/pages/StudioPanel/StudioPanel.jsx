@@ -110,7 +110,8 @@ export default function StudioPanel() {
         
           <MyVerticallyCenteredModal 
        show={TelgramModalShow}
-       onHide={TelegramonHide}>
+       onHide={TelegramonHide}
+       info={true}>
       <p>
       شناسه تلگرامی خود را از ربات:
       <br />
@@ -123,6 +124,7 @@ export default function StudioPanel() {
      
       <MyVerticallyCenteredModal 
        show={StudioModalShow}
+       info={true}
        onHide={StudioonHide}>
       <p>
       عکس لوگو و تصویر استودیو

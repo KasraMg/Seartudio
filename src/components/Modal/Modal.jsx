@@ -2,7 +2,7 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './Modal.css'
-export default function MyVerticallyCenteredModal({onHide,children,show}) {
+export default function MyVerticallyCenteredModal({onHide,children,show,info}) {
     return (
       <>
       {show &&(
@@ -18,8 +18,11 @@ export default function MyVerticallyCenteredModal({onHide,children,show}) {
         centered
       >
         <Modal.Header >
-        <img src="../../public/images/similar/Group 32.png" alt="" />
-        <img onClick={onHide} src="../../public/images/similar/🦆 icon _cancel_.png" style={{width:'35px'}} alt="" />
+          {info && (
+                    <img src="../../public/images/similar/Group 32.png" alt="" />
+          )}
+
+        <img onClick={onHide} src="../../public/images/similar/🦆 icon _cancel_.png" className='close-modal-icon' alt="" />
         </Modal.Header>
         <Modal.Body>
        {
