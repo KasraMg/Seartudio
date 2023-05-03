@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
-import Loader from '../Loader/Loader'
+import EmailLoading from '../EmailLoading/EmailLoading'
 import MyVerticallyCenteredModal from '../Modal/Modal'
 export default function Footer() {
     const [emailValue,setEmailValue]=useState()
-    // const [showLoader,setShowLoader]=useState(true)
+    const [showLoader,setShowLoader]=useState(false)
     const [status201, setStatus201] = useState(false);
     const [status422, setStatus422] = useState(false);
     const [status400, setStatus400] = useState(false);
@@ -23,7 +23,7 @@ export default function Footer() {
     const emailRigester=()=>{
 
     
-        // setShowLoader(true)
+        setShowLoader(true)
       
     let formData = new FormData();
     formData.append("email", emailValue);
@@ -33,7 +33,7 @@ export default function Footer() {
       
       })
         .then( res=> {
-            // setShowLoader(false)
+            setShowLoader(false)
             res.json()
         console.log(res)
         if (res.status==201) {
@@ -114,9 +114,9 @@ export default function Footer() {
      
       </MyVerticallyCenteredModal>
 
-{/* {showLoader && (
-    <Loader/>
-)} */}
+{showLoader && (
+    <EmailLoading/>
+)}
         </footer>
     )
 }

@@ -10,6 +10,7 @@
     position: relative;
     bottom: 41px;
 }
+
 .modal-header img{
     width: 50px ;
     z-index: 999;
@@ -42,6 +43,7 @@
     left: 0;
     height: 100vh;
     width: 100%;
+  
     z-index: 202;
 }
 .modal,.modal-backdrop{
@@ -66,3 +68,4 @@
         margin-right: auto;
     }
 }
+

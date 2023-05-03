@@ -1,8 +1,15 @@
 
 import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import './Modal.css'
 export default function MyVerticallyCenteredModal({onHide,children,show,info}) {
+
+//   let modalFade= document.documentElement.getElementsByClassName('modal')
+// console.log(modalFade);
+// modalFade.addEventListener('click',()=>{
+//     console.log('hi');
+  // })
     return (
       <>
       {show &&(
@@ -14,6 +21,10 @@ export default function MyVerticallyCenteredModal({onHide,children,show,info}) {
       <Modal
       show={show}
         size="lg"
+        
+        onClick={onHide}
+    
+        
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
