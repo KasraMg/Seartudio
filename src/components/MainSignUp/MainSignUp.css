@@ -1,0 +1,327 @@
+.create-studio textarea{
+    font-family: lalezar;
+    width: 400px;
+    background-color: #EC4141;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    border-radius: 40px;
+    outline: none !important;
+    border: none;
+    padding: .8rem 3.2rem .8rem 2rem;
+    letter-spacing: 1px;
+    background-repeat: no-repeat;
+    background-position: 98%8px;
+    background-size: 37px 37px;
+    background-image: url(../../../public/images/signup/Group\ 30.png);
+}
+@media (max-width:967px) {
+    .create-studio textarea{
+        width: 100% !important;
+    }
+}
+.create-studio textarea::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.create-studio{
+    margin-top: 5rem;
+}
+.create-studio-title{
+    font-size: 40px;
+    text-align: center;
+    font-family: lalezar;
+}
+.create-studio input{
+    width: 400px;
+    background-color: #EC4141;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    border-radius: 40px;
+    outline: none !important;
+    border: none;
+    padding: .8rem 3.2rem .8rem 2rem;
+    letter-spacing: 1px;
+    background-repeat: no-repeat;
+    background-position: 98% 5px;
+    background-size: 37px 37px;
+}
+.create-studio main{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 110px;
+    row-gap: 15px !important;
+    padding-bottom: 2rem;
+}
+.create-studio input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+.create-studio input:nth-child(1){
+    background-image: url(../../../public/images/similar/Group\ 26.png);
+}
+.create-studio input:nth-child(2){
+    background-image: url(../../../public/images/signup/Group\ 30.png);
+}
+.create-studio input:nth-child(3){
+    background-image: url(../../../public/images/signup/Vector.png);
+}
+.create-studio input:nth-child(4){
+    background-image: url(../../../public/images/signup/phone.png);
+}
+.create-studio input:nth-child(5){
+    background-image: url(../../../public/images/signup/Group\ 31.png);
+}
+.create-studio input:nth-child(6){
+    background-image: url(../../../public/images/signup/Group\ 28.png);
+}
+.create-studio input:nth-child(7){
+    background-image: url(../../../public/images/signup/Group\ 32.png);
+}
+.create-studio input:nth-child(8){
+    background-image: url(../../../public/images/signup/Group\ 322.png);
+}
+.create-studio input:nth-child(9){
+    background-image: url(../../../public/images/signup/Vector4.png);
+}
+
+.create-studio input:nth-child(10){
+    background-image: url(../../../public/images/signup/Vector5.png);
+}
+.create-studio input:nth-child(11){
+    background-image: url(../../../public/images/signup/Group\ 323.png);
+}
+.create-studio input:nth-child(12){
+    background-image: url(../../../public/images/signup/Group\ 324.png);
+}
+.create-studio input:nth-child(13){
+    background-image: url(../../../public/images/signup/Vector3.png);
+}
+
+
+
+.create-studio .cyties-dropDown .dropdown-toggle{
+    background-image: url(../../../public/images/signup/Group\ 325.png);
+}
+.licens-dropDown .dropdown-toggle{
+    background-image: url(../../../public/images/signup/Group\ 322.png); 
+}
+.studio-type-dropDown .dropdown-toggle{
+    background-image: url(../../../public/images/signup/Vector5.png); 
+}
+.rules-div{
+    background-color: #EC4141 !important;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    border-radius: 50px;
+    width: 100%;
+    padding: 6px 3% 8px 10%;
+    
+}
+.rules-div img{
+    position:absolute;
+    top: 13px;
+    width: 29px;
+    cursor: pointer;
+    left: 18px;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+.rules-div p{
+    position: relative;
+    top: 6px;
+}
+.rules-div a{
+    color: black;
+    text-decoration: none;
+}
+.rules-div a:hover{
+    color: black;
+}
+.create-studio .dropdown-toggle{
+    background-color: #EC4141 !important;
+  color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 98% 3px;
+    background-size: 37px 37px;
+  
+    padding: 10px 10%;
+    border-radius: 50px;
+    padding-right: 3.5rem;
+}
+@media (min-width:351px) {
+    .create-studio .dropdown-toggle{
+        padding-top: .8rem !important ;
+        padding-bottom: .8rem  !important;
+    }
+}
+.create-studio .dropdown-toggle:hover{
+    background-color: #EC4141 !important;
+    color: rgba(255, 255, 255, 0.5);
+}
+.create-studio .dropdown-toggle:hover,
+.create-studio .dropdown-toggle:active,
+.create-studio .dropdown-toggle:focus-visible {
+    background-color: #EC4141 !important;
+  color: rgba(255, 255, 255, 0.5);
+    border: none !important;
+}
+
+.create-studio  .dropdown-toggle::after {
+
+    background-image: url(/public/images/signup/Vector6.png);
+    border: none !important;
+    background-size: 23px 14px;
+    display: inline-block;
+    margin-left: 0.255em;
+    width: 76px;
+    vertical-align: 0.255em;
+    height: 45px;
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    content: "";
+    background-repeat: no-repeat;
+}
+
+.create-studio  .dropdown-menu{
+    inset: 0px 4px auto 0px !important;
+    text-align: right;
+    font-family: lalezar;
+}
+.cyties-dropDown .dropdown-menu{
+    height: 102px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.create-studio main div{
+    position: relative;
+}
+.sign-up-studio-span{
+    position: absolute;
+    top: 14px;
+    left: 260px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    z-index: 100;
+    background-color: transparent;
+}
+.sign-up-logo-span{
+    position: absolute;
+    top: 14px;
+    right: 55px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: lalezar;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.create-studio-btn{
+    padding: .4rem 4rem .2rem;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: lalezar;
+    background-color: #EC4141;
+    color: white;
+    display: block;
+    border: none;
+    border-radius: 60px;
+    font-size: 28px;
+    margin-bottom: 4rem;
+}
+
+.logo-input{
+    background-image: url(../../../public/images/signup/Group\ 323.png) !important;
+    background-position-y: 8px !important;
+    color: transparent !important;
+}
+.picture-input{
+    background-image: url(../../../public/images/signup/Group\ 324.png) !important;
+    background-position-y: 8px !important;
+    color: transparent !important;
+}
+
+.logo-input::-webkit-file-upload-button,
+.picture-input::-webkit-file-upload-button{
+    border: none;
+    border-radius: 30px;
+    background: #D9D9D9;
+    padding-top: .2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.file-input-parent img{
+    position: absolute;
+    left: 13px;
+    width: 24px;
+    top: 15px;
+}
+.telegram-input img{
+    position: absolute;
+    left: 13px;
+    width: 24px;
+    top: 13px;
+}
+.file-input-parent img:hover,
+.telegram-input img:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
+
+/* responsive style in SignUp.css */
+
+
+
+.all-erorrs{
+font-size: .8rem;
+display: grid;
+    width: 100%;
+    row-gap: 0px !important;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 104px;
+font-family: lalezar;
+text-align: right;
+width: max-content;
+margin-top: 2rem;
+margin-left: auto;
+}
+.all-erorrs div{
+    background-color: red;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+}
+.all-erorrs div p{
+    margin-bottom: 0rem;
+    width: 250px;
+    margin-bottom: 0px;
+}
+@media (max-width:900px) {
+    .all-erorrs{
+grid-template-columns: auto ;
+gap: 10px;
+justify-content: center;
+margin-right: auto;
+
+    }.all-erorrs div{
+        width: 100%;
+    }
+}
+
+.create-studio .EmailLoading-loader {
+    left: 0 !important;
+    top: 44% !important;
+}

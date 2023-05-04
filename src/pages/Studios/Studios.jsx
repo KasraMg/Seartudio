@@ -13,16 +13,7 @@ export default function Studios() {
     const [license,setLicense]=useState('همه')
     const [type,setType]=useState('همه')
 
-    // fetch(`https://api.seartudio.com/studio${type && `?type= ${type}`}${license  && `&license= ${license}`}${city  && `&province= ${city}`}`)
-    // useEffect(() => {
-    //  fetch(`https://api.seartudio.com/studio${type ? `?type= ${type}`: ''}${license  ? `&license= ${license}`: ''}${city  ? `&province= ${city}`: ''}`)
-    //  .then(res=>res.json())
-    //  .then(data=>{
-    //     console.log(data.data);
-    //     setAllData(data.data);
-
-    //  })
-    // }, [])
+   
     useEffect(() => {
         fetch(`https://api.seartudio.com/studio?type=${type}&license=${license}&province=${city}&skip=`)
         .then(res=>res.json())
@@ -56,7 +47,7 @@ export default function Studios() {
 
                             <Dropdown.Menu>
                                 {Allprovinces.map(data=>(
-                                     <Dropdown.Item onClick={()=>setCity(data)} href="#/action-1">{data}</Dropdown.Item>  
+                                     <Dropdown.Item onClick={()=>setCity(data)}>{data}</Dropdown.Item>  
                                 ))}
                              
                             </Dropdown.Menu>
@@ -70,8 +61,8 @@ export default function Studios() {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={()=>setType('حرفه ای')} href="#/action-1">حرفه ای </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setType('خانگی')} href="#/action-2"> خانگی</Dropdown.Item>
+                                <Dropdown.Item onClick={()=>setType('حرفه ای')} >حرفه ای </Dropdown.Item>
+                                <Dropdown.Item onClick={()=>setType('خانگی')}> خانگی</Dropdown.Item>
                        
                             </Dropdown.Menu>
                         </Dropdown>
@@ -85,8 +76,8 @@ export default function Studios() {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={()=>setLicense('دارد')} href="#/action-1">دارد</Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setLicense('ندارد')} href="#/action-2">ندارد </Dropdown.Item>
+                                <Dropdown.Item onClick={()=>setLicense('دارد')}>دارد</Dropdown.Item>
+                                <Dropdown.Item onClick={()=>setLicense('ندارد')}>ندارد </Dropdown.Item>
                                
                             </Dropdown.Menu>
                         </Dropdown>
@@ -105,12 +96,12 @@ export default function Studios() {
                     </p>
                }
            >
-                  {allData && allData.map(data=>(
-                    <IntroStudioSection {...data} />
-                ))}
+              
            </InfiniteScroll> */}
              
-                
+                    {allData && allData.map(data=>(
+                    <IntroStudioSection {...data} />
+                ))}
         
             </main>
 
