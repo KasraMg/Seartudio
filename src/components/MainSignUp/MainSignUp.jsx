@@ -28,7 +28,7 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
     const [Status201,setStatus201]=useState()
     const [Status409,setStatus409]=useState()
     const [Status400,setStatus400]=useState()
-    const [loader,setLoader]=useState(true)
+    const [loader,setLoader]=useState(false)
     const RulesModalHide = () => {
         setRulesModal(false)
     }
