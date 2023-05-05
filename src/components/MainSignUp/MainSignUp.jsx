@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './MainSignUp.css'
 import MyVerticallyCenteredModal from '../Modal/Modal';
 import EmailLoading from '../EmailLoading/EmailLoading';
-import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) {
     const [Allprovinces, setAllProvinces] = useState(provinces)
     const [name, setName] = useState('')
@@ -29,6 +29,10 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
     const [Status409,setStatus409]=useState()
     const [Status400,setStatus400]=useState()
     const [loader,setLoader]=useState(false)
+
+
+
+    const navigate = useNavigate();
     const RulesModalHide = () => {
         setRulesModal(false)
     }
@@ -84,6 +88,10 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                     
                     if (data.statusCode && data.statusCode==201) {
                         setStatus201(true)
+                        setInterval(() => {
+                          navigate('/login')  
+                        }, 3000);
+                        
                     }else if(data.statusCode && data.statusCode==409){
                         setStatus409(true)
                     }
@@ -192,17 +200,23 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                 </Dropdown>
 
                 <div className='file-input-parent'>
-                    <input onChange={(e) => {
+                    <input   onChange={(e) => {
                         setLogo(e.target.files[0])
-                        console.log(logo);
-                    }} type="file" className='logo-input' dir='ltr' placeholder='تصویر لوگو' />
-                    <p className='sign-up-logo-span'>تصویر لوگو</p>
+                        
+                    }} type="file" className={!logo ? ' input-c-transparent logo-input' : 'logo-input input-c-white'}  dir='ltr' placeholder='تصویر لوگو' />
+                    {!logo &&(
+                        <p className='sign-up-logo-span'>تصویر لوگو</p>
+                    )}
+                    
                     <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
                 </div>
 
                 <div className='file-input-parent'>
-                    <input onChange={(e) => setImage(e.target.files[0])} type="file" dir='ltr' className='picture-input' placeholder='تصویر استودیو' />
-                    <p className='sign-up-studio-span'>تصویر استودیو</p>
+                    <input  onChange={(e) => setImage(e.target.files[0])} type="file" dir='ltr'  className={!image ? ' input-c-transparent picture-input' : 'picture-input input-c-white'} placeholder='تصویر استودیو' />
+                   
+                    {!image &&(
+                       <p className='sign-up-studio-span'>تصویر استودیو</p>
+                    )}
                     <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
                 </div>
 
