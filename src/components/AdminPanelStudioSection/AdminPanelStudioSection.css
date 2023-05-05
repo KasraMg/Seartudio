@@ -209,19 +209,6 @@ margin-left: .5rem;
 .AdminPanelStudioSection-details img{
     margin-left: .5rem;
 }
-.AdminPanelStudioSection-details input{
-    background: #D9D9D9;
-border-radius: 50px;
-outline: none;
-border: 0px;
-padding: .9rem 1rem .7rem 3rem;
-width:200px;
-direction: rtl;
-font-size: 1.3rem;
-position: relative;
-font-family: lalezar;
-top: 5px;
-}
 
 .AdminPanelStudioSection-details-button button{
     background-color: #D9D9D9;
@@ -240,10 +227,10 @@ margin-bottom:1.5rem;
 .AdminPanelStudioSection-details p{
     position: absolute;
     left: 12px;
-    top: 11px;
+    top: 13px;
     color: #263238;
     font-family: lalezar;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .AdminPanelStudioSection-description{
     position: relative;
@@ -309,4 +296,94 @@ margin-bottom:1.5rem;
     }.AdminPanel main .AdminPanel-formCheck {
         margin-top: 1rem ;
     }
+}
+
+.image-check{
+ position: absolute;
+
+    top: 18px;
+    width: 28px !important;
+    cursor: pointer;
+    left: 13px;
+    border-radius: 30px;
+    border: 3px solid white;
+}
+
+.Intro-Studio-Section-form-check{
+    position: relative;
+}
+.isPromoted-image{
+    top: 78px;
+}
+
+@media (max-width:500px) {
+    .image-check{
+        left: -20px;
+    }.Promoted-input{
+        left: -100px;
+    }.Intro-Studio-Section-form-check .form-check-inline p{
+        left: -85px ;
+    }
+}
+@media (max-width:390px) {
+    .image-check{
+        top: 6px;
+    }.isPromoted-image{
+        top: 50px !important;
+    }.Promoted-input{
+        left: 8px !important;
+    top: 42px !important;
+    }.Intro-Studio-Section-title{
+        padding-bottom: 3rem;
+    }.Intro-Studio-Section-form-check .form-check-inline p{
+        left: 14px !important ;
+        top: 46px !important;
+    }
+}
+@media (min-width:501px) {
+    .Promoted-input{
+    left: -68px;
+    }.Intro-Studio-Section-form-check .form-check-inline p{
+        left: -60px;
+    }
+}
+.Promoted-input{
+   width: 120px;
+   padding: 0.3rem 0.5rem 0.3rem 3rem !important;
+    height: 40px;
+    background: #D9D9D9;
+    border-radius: 50px;
+    outline: none;
+    border: 0px;
+    position: relative;
+
+    font-size: 14px;
+    top: 10px;
+    position: absolute;
+}
+.form-check-inline{
+    position: relative;
+}
+.AdminPanelStudioSection-details input{
+    background: #D9D9D9;
+border-radius: 50px;
+outline: none;
+border: 0px;
+font-size: 14px !important;
+    height: 40px;
+width: 120px ;
+direction: rtl;
+font-size: 1.3rem;
+position: relative;
+font-family: lalezar;
+top: 5px;
+padding: 0.3rem 0.5rem 0.3rem 3rem !important;
+}
+.Intro-Studio-Section-form-check .form-check-inline p{
+    position: absolute;
+
+    top: 13px;
+    color: #263238;
+    font-family: lalezar;
+    font-size: 1.5rem;
 }

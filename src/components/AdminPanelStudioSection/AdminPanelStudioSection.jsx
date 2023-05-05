@@ -1,25 +1,35 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './AdminPanelStudioSection.css'
-export default function AdminPanelStudioSection() {
+export default function AdminPanelStudioSection(props) {
+  const [verify,setVerify]=useState(props.isVeryfied)
+  const [isPromoted,setisPromoted]=useState(props.isPromoted)
+  
+  console.log(props);
   return (
     <section className='Intro-Studio-Section AdminPanelStudioSection'>
-    <img src="../../public/images/index/Mask group.png" className='Intro-Studio-Section-absolute-img' alt="" />
+    <img src={props.image}className='Intro-Studio-Section-absolute-img' alt="" />
     <div className='Intro-Studio-Section-title'>
       <div>
-         <p className='AdminPanelStudioSection-title' >استودیو مسیر</p> 
-         <button>مشاهده</button>
+         <p className='AdminPanelStudioSection-title' > {props.name}</p> 
+         <button><a style={{color:'black'}} target='_blank' href={`/StudioPage/${props.studioId}`}>مشاهده</a></button>
       </div>
       
        
        <div className='Intro-Studio-Section-form-check'>
        <div class="form-check ">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+       { verify? (
+                        <img className='image-check' onClick={() => setVerify(false)} src="../../public/images/signup/photo_5949261142641720371_m.jpg" alt="Logo" />
+                    ) : (
+                        <img className='image-check' onClick={() => setVerify(true)} src="../../public/images/signup/Rectangle 39.png" alt="Logo" />
+                    )}
+ 
   <label class="form-check-label" for="inlineRadio1">وریفای</label>
   <img src="../../public/images/adminpanel/Group 38.png" alt="" />
 </div>
 
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" />
+<input dir='rtl' type="text"  className='Promoted-input'/>
+<p>ماه</p>
   <label class="form-check-label" for="inlineRadio3"> پروموت</label>
   <img src="../../public/images/adminpanel/🦆 icon _voice ok_.png" alt="" />
 </div>
@@ -30,7 +40,7 @@ export default function AdminPanelStudioSection() {
 
     <div className='AdminPanelStudioSection-details'>
         <div className='AdminPanelStudioSection-description'>
-            <input type="text"  />
+            <input dir='rtl' type="text"  />
             <img src="../../public/images/adminpanel/Group 37.png" alt="" />
             <p>ماه</p>
         </div>

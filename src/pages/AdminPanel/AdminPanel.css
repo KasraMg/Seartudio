@@ -45,3 +45,8 @@
         margin-top: 4rem;
         direction: rtl;
     }
+
+    .AdminPanel .EmailLoading-loader {
+        left: 0 !important;
+        top: 44% !important;
+    }

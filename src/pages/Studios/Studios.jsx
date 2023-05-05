@@ -91,7 +91,7 @@ export default function Studios() {
             <main>
                 {allData && allData.length  &&(
                       <InfiniteScroll
-             dataLength={allData.length}
+             dataLength={50}
 
              next={addSkip}
            
