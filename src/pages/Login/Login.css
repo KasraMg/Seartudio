@@ -18,7 +18,7 @@
 .Login section div input{
     width: 400px;
     background-color: #EC4141;
-    color: rgba(0, 0, 0, 0.475) !important;
+    color: rgba(243, 243, 243, 0.804) !important;
     font-family: lalezar;
     border-radius: 40px;
     outline: none !important;
@@ -27,7 +27,7 @@
     letter-spacing: 1px;
 }
 .Login section div input::placeholder{
-    color: rgba(0, 0, 0, 0.475) !important;
+    color: rgba(255, 255, 255, 0.475) !important;
 }
 .Login input:nth-child(1){
     background-image: url(../../../public/images/similar/Group\ 26.png);
@@ -107,4 +107,35 @@
         width: 280px !important;
     }
 
+}
+
+.login-401{
+padding: 0rem 16.5rem;
+    font-family: lalezar;
+    font-size: .8rem;
+    display: flex;
+    justify-content: right;
+}
+.login-401 p{
+    width: max-content;
+    direction: rtl;
+    border-radius: 30px;
+    padding: .5rem 1rem;
+    background-color: red;
+    margin-bottom: 0px;
+}
+@media (max-width:1210px) {
+    .login-401{
+        padding: 0rem 3.5rem;
+    }
+}
+@media (max-width:500px) {
+    .login-401{
+        padding: 0rem 1rem;
+    }
+
+}
+.Login .EmailLoading-loader {
+    left: 0 !important;
+    top: 44% !important;
 }

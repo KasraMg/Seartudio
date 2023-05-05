@@ -17,7 +17,8 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-loading-skeleton": "^3.2.1",
     "react-router-dom": "^6.10.0",
-    "react-shimmer": "^3.2.0"
+    "react-shimmer": "^3.2.0",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

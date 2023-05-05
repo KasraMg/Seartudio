@@ -3,7 +3,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import provinces from '../../pages/Studios/data'
 import { Link } from 'react-router-dom';
 import './MainSignUp.css'
-import MyVerticallyCenteredModal from '../Modal/Modal';
+import swal from "sweetalert";
 import EmailLoading from '../EmailLoading/EmailLoading';
 import { useNavigate } from 'react-router-dom';
 export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) {
@@ -17,39 +17,29 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
     const [telId, setTelId] = useState('')
     const [logo, setLogo] = useState('')
     const [image, setImage] = useState('')
-    const [pssword, setPssword] = useState('')
+    const [password, setPassword] = useState('')
     const [city, setCity] = useState('همه')
     const [license, setLicense] = useState('همه')
     const [type, setType] = useState('همه')
     const [rules, setRules] = useState(false)
     const [description, setDescription] = useState('')
-    const [RulesModal, setRulesModal] = useState(false);
     const [Error, setErrors] = useState('')
-    const [Status201,setStatus201]=useState()
-    const [Status409,setStatus409]=useState()
-    const [Status400,setStatus400]=useState()
     const [loader,setLoader]=useState(false)
-
+    
 
 
     const navigate = useNavigate();
-    const RulesModalHide = () => {
-        setRulesModal(false)
-    }
 
-    const status201Hide=()=>{
-        setStatus201(false)
-    }
-    const status400Hide=()=>{
-        setStatus400(false)
-    }
-    const status409Hide=()=>{
-        setStatus409(false)
-    }
     const createStudioHandler = () => {
 
         if (!rules) {
-            setRulesModal(true)
+          swal({
+            title: " لطفا قبل از ثبت استودیو قوانین و تایید کنید.",
+            icon: "error",
+            buttons: "تلاش دوباره",
+                
+             
+          })
         } else {
             let formData = new FormData();
             formData.append("name", name);
@@ -61,8 +51,8 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
             formData.append("telegramId", telId);
             formData.append("logo", logo);
             formData.append("image", image);
-            formData.append("passWord", pssword);
-            formData.append("province", city);
+            formData.append("passWord", password);
+            formData.append("province", city.trim());
             formData.append("license", license);
             formData.append("type", type);
             formData.append("description", description);
@@ -83,20 +73,38 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
 
                     console.log(data);
 
-                   
+                 
                    
                     
                     if (data.statusCode && data.statusCode==201) {
-                        setStatus201(true)
-                        setInterval(() => {
-                          navigate('/login')  
-                        }, 3000);
+                         
+                         setErrors(null)
                         
+                         swal({
+                            title: "استودیوی شما با موفقیت ثبت شد.",
+                            icon: "success",
+                            buttons: "ورود به لاگین",
+                          }).then(()=>{
+                            navigate('/login')
+                          })
+                       
+                                         
+                    
+                         
                     }else if(data.statusCode && data.statusCode==409){
-                        setStatus409(true)
+                      
+                        swal({
+                            title: "این استودیو قبلا ثبت شده است.",
+                            icon: "error",
+                            buttons: "تلاش دوباره",
+                          })
                     }
                     else if(data.statusCode && data.statusCode==400){
-                        setStatus400(true)
+                        swal({
+                            title: "برای این استودیو لوگو یا عکس انتخاب کنید.",
+                            icon: "error",
+                            buttons: "تلاش دوباره",
+                          })
                     }
                     if (data && data.errors) {
                      setErrors(data.errors);
@@ -220,7 +228,7 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                     <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
                 </div>
 
-                <input value={pssword} onChange={(e) => setPssword(e.target.value)} type="password" placeholder='رمز عبور' />
+                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='رمز عبور' />
 
                 <div className='rules-div'>
                     <p><Link to='/rules'>شرایط و قوانین</Link> سرتودیو را میپذیرم </p>
@@ -238,42 +246,10 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
 
             <button onClick={createStudioHandler} className='create-studio-btn mt-4'>ثبت</button>
 
-            <MyVerticallyCenteredModal
-                show={RulesModal}
-                onHide={RulesModalHide}>
-                <p className='mt-3'>
-                    لطفا قبل از ثبت استودیو قوانین و تایید کنید.
-                </p>
-            </MyVerticallyCenteredModal>
+           
 
-            <MyVerticallyCenteredModal
-                show={Status201}
-                onHide={status201Hide}>
-                <p className='mt-3'>
-                استودیوی شما با موفقیت ثبت شد.
-                </p>
-            </MyVerticallyCenteredModal>
-            <MyVerticallyCenteredModal
-                show={Status409}
-                onHide={status409Hide}>
-                <p className='mt-3'>
-             این استودیو قبلا ثبت شده است.
-                </p>
-            </MyVerticallyCenteredModal>
-            <MyVerticallyCenteredModal
-                show={Status201}
-                onHide={status201Hide}>
-                <p className='mt-3'>
-                استودیوی شما با موفقیت ثبت شد.
-                </p>
-            </MyVerticallyCenteredModal>
-            <MyVerticallyCenteredModal
-                show={Status400}
-                onHide={status400Hide}>
-                <p className='mt-3'>
-             برای این استودیو لوگو یا عکس انتخاب کنید.
-                </p>
-            </MyVerticallyCenteredModal>
+      
+         
 
             {loader &&(
                 <EmailLoading/>

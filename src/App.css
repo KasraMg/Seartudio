@@ -1,16 +1,16 @@
 @font-face {
     font-family: lalezar;
-    src: url(./Lalezar-Font/OTF/Lalezar-Regular.otf);
+    src: url(./fonts/Lalezar-Font/OTF/Lalezar-Regular.otf);
   }
   
-  /* @font-face {
+  @font-face {
     font-family: vazir;
     src: url(./fonts/vazir/Vazir-Bold.woff) format("woff");
   }
   @font-face {
     font-family: vazirmd;
     src: url(./fonts/vazir/Vazir.woff) format('woff');
-  } */
+  }
   *{
     margin: 0px;
   }
@@ -28,4 +28,26 @@
   }
   .fs-8 {
     font-size: 0.8rem;
+  }
+
+  .swal-modal {
+    border-radius: 30px;
+  }
+  .swal-title{
+    direction: rtl;
+    font-family: vazir;
+  }
+  .swal-footer{
+    text-align: center;
+  }
+  .swal-footer button{
+    background-color: blue;
+    transition: .2s ease all;
+    opacity: 1;
+    font-family: vazirmd;
+  }
+
+  .swal-button:not([disabled]):hover {
+  
+    background-color: blue;
   }
