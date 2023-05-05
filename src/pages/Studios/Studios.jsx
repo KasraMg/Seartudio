@@ -8,21 +8,25 @@ import  provinces  from './data';
 import InfiniteScroll from 'react-infinite-scroll-component'
 export default function Studios() {
     const [Allprovinces,setAllProvinces]=useState(provinces)
-    const [allData,setAllData]=useState()
+    const [allData,setAllData]=useState('')
     const [city,setCity]=useState('همه')
     const [license,setLicense]=useState('همه')
     const [type,setType]=useState('همه')
-
+    const [skip,setSkip]=useState(0)
    
     useEffect(() => {
-        fetch(`https://api.seartudio.com/studio?type=${type}&license=${license}&province=${city}&skip=`)
+        fetch(`https://api.seartudio.com/studio?type=${type}&license=${license}&province=${city}&skip=${skip}`)
         .then(res=>res.json())
         .then(data=>{
            console.log(data.data);
-           setAllData(data.data);
+           setAllData((prev=>prev, data.data));
    
         })
-       }, [city,type,license])
+       }, [city,type,license,skip])
+       const addSkip=()=>{
+        setSkip(prev=>prev + 1)
+        console.log(skip);
+       }
     return (
         <div className='Studios'>
             <Header />
@@ -85,10 +89,12 @@ export default function Studios() {
             </div>
 
             <main>
-                {/* <InfiniteScroll
-             dataLength={this.state.items.length}
-             next={this.fetchData}
-             hasMore={this.state.hasMore}
+                {allData && allData.length  &&(
+                      <InfiniteScroll
+             dataLength={allData.length}
+
+             next={addSkip}
+           
              loader={<h4>Loading...</h4>}
              endMessage={
                     <p style={{ textAlign: 'center' }}>
@@ -96,12 +102,16 @@ export default function Studios() {
                     </p>
                }
            >
-              
-           </InfiniteScroll> */}
-             
-                    {allData && allData.map(data=>(
+                {allData.map(data=>(
                     <IntroStudioSection {...data} />
                 ))}
+           </InfiniteScroll>
+                )}
+              
+             
+                    {/* {allData && allData.map(data=>(
+                    <IntroStudioSection {...data} />
+                ))} */}
         
             </main>
 
