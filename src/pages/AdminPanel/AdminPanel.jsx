@@ -78,7 +78,7 @@ export default function AdminPanel() {
             
         </div>
     {studios && studios.map(data=>(
-       <AdminPanelStudioSection {...data}/>
+       <AdminPanelStudioSection  {...data}/>
     ))}
        
        {loader &&(

@@ -4,7 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import './SignUp.css'
 import Header from '../../components/Header/Header'
 import MainSignUp from '../../components/MainSignUp/MainSignUp';
-import swal from "sweetalert";
+
 
 import MyVerticallyCenteredModal from '../../components/Modal/Modal';
 export default function SignUp() {
