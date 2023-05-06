@@ -73,6 +73,9 @@ gap: 10px;
         justify-content: space-between;
         align-items: center;
         padding-top: 1rem;
+    }.Intro-Studio-Section-title p {
+        top: 19px !important;
+        left: 8px !important;
     }
 }
 @media (max-width:424px) {
@@ -197,11 +200,12 @@ margin-left: .5rem;
 }
 .AdminPanelStudioSection-title{
     margin-bottom: .2rem;
+    width: 230px;
 }
 
 .AdminPanelStudioSection-details{
         display: flex;
-      
+        align-items: baseline;
         flex-direction: row-reverse;
         justify-content: left;
         gap: 200px;   
@@ -277,6 +281,17 @@ margin-bottom:1.5rem;
         margin-top: 2rem;
     }.AdminPanelStudioSection-details input {
         width: 82%;
+    }.AdminPanelStudioSection-description{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    justify-content: space-evenly;
+    }.AdminPanelStudioSection-details p {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }.verify-form{
+        padding-right: .2rem !important;
     }
 }
 
@@ -299,12 +314,12 @@ margin-bottom:1.5rem;
 }
 
 .image-check{
- position: absolute;
+ position: relative;
 
-    top: 18px;
+
     width: 28px !important;
     cursor: pointer;
-    left: 13px;
+    right: 10px;
     border-radius: 30px;
     border: 3px solid white;
 }
@@ -319,34 +334,40 @@ margin-bottom:1.5rem;
 @media (max-width:500px) {
     .image-check{
         left: -20px;
-    }.Promoted-input{
-        left: -100px;
-    }.Intro-Studio-Section-form-check .form-check-inline p{
-        left: -85px ;
+    }.AdminPanelStudioSection-title{
+        text-align: center;
+    }.AdminPanelStudioSection-details-button{
+        margin-left: auto;
+        margin-right: auto;
+    }.Intro-Studio-Section-form-check .form-check {
+        justify-content: center !important;
+    }.prom-form-check{
+        flex-direction: column-reverse;
+        padding-top: 1rem;
+        padding-right: 1rem;
     }
 }
 @media (max-width:390px) {
-    .image-check{
-        top: 6px;
-    }.isPromoted-image{
+    .isPromoted-image{
         top: 50px !important;
     }.Promoted-input{
         left: 8px !important;
     top: 42px !important;
     }.Intro-Studio-Section-title{
         padding-bottom: 3rem;
-    }.Intro-Studio-Section-form-check .form-check-inline p{
-        left: 14px !important ;
-        top: 46px !important;
+    }.Intro-Studio-Section-title p {
+        top: 7px !important;
     }
 }
 @media (min-width:501px) {
     .Promoted-input{
     left: -68px;
     }.Intro-Studio-Section-form-check .form-check-inline p{
-        left: -60px;
+        left: 5px;
+        top: 19px !important;
     }
 }
+
 .Promoted-input{
    width: 120px;
    padding: 0.3rem 0.5rem 0.3rem 3rem !important;
@@ -355,11 +376,10 @@ margin-bottom:1.5rem;
     border-radius: 50px;
     outline: none;
     border: 0px;
-    position: relative;
+    margin-right: .5rem;
 
     font-size: 14px;
-    top: 10px;
-    position: absolute;
+  
 }
 .form-check-inline{
     position: relative;
@@ -386,4 +406,23 @@ padding: 0.3rem 0.5rem 0.3rem 3rem !important;
     color: #263238;
     font-family: lalezar;
     font-size: 1.5rem;
+}
+
+.prom-input-div,.active-input-div{
+    position: relative;
+}
+
+.AdminPanelStudioSection-description{
+    display: flex;
+    align-items: center;
+}
+
+.Intro-Studio-Section-form-check .form-check{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.verify-form{
+    padding-right: 1rem;
 }

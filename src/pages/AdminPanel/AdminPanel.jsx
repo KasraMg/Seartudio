@@ -7,10 +7,16 @@ export default function AdminPanel() {
   const [radioStatus,setRadioStaus]=useState('همه')
   const [studios,setStudios]=useState(null)
   const [loader,setloader]=useState(false)
+
+
   useEffect(() => {
+    getStudio()
+  }, [radioStatus])
+  
+  const getStudio=()=>{
     const localStorageData = JSON.parse(localStorage.getItem("user"));
     if (radioStatus=='همه') {
-  
+      setloader(true)
     fetch('https://api.seartudio.com/admin/getAllStudios',{
       headers:{
         authorization : `${localStorageData.token}`
@@ -20,11 +26,11 @@ export default function AdminPanel() {
     .then(data=>{
      setStudios(data.data);
      console.log(data);
-     
+     setloader(false)
 
     })
   }else if(radioStatus=='غیرفعال'){
-
+    setloader(true)
     fetch('https://api.seartudio.com/admin/getDeactiveStudios',{
       headers:{
         authorization : `${localStorageData.token}`
@@ -33,10 +39,10 @@ export default function AdminPanel() {
     .then(res =>res.json())
     .then(data=>{
      setStudios(data.data);
-     
+     setloader(false)
     })
   }else{
-
+    setloader(true)
     fetch('https://api.seartudio.com/admin/getActiveStudios',{
       headers:{
         authorization : `${localStorageData.token}`
@@ -45,11 +51,10 @@ export default function AdminPanel() {
     .then(res =>res.json())
     .then(data=>{
      setStudios(data.data);
-     
+     setloader(false)
     })
   }
-  }, [studios])
-  
+  }
   return (
     <div className='AdminPanel'>
         <StudioPanelHeader title='مدیریت'/>

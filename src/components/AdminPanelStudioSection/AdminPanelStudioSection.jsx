@@ -7,7 +7,7 @@ export default function AdminPanelStudioSection(props) {
   console.log(props);
   return (
     <section className='Intro-Studio-Section AdminPanelStudioSection'>
-    <img src={props.image}className='Intro-Studio-Section-absolute-img' alt="" />
+    <img crossOrigin='anonymous' src={props.image}className='Intro-Studio-Section-absolute-img' alt="" />
     <div className='Intro-Studio-Section-title'>
       <div>
          <p className='AdminPanelStudioSection-title' > {props.name}</p> 
@@ -16,7 +16,7 @@ export default function AdminPanelStudioSection(props) {
       
        
        <div className='Intro-Studio-Section-form-check'>
-       <div class="form-check ">
+       <div class="form-check verify-form">
        { verify? (
                         <img className='image-check' onClick={() => setVerify(false)} src="../../public/images/signup/photo_5949261142641720371_m.jpg" alt="Logo" />
                     ) : (
@@ -27,9 +27,12 @@ export default function AdminPanelStudioSection(props) {
   <img src="../../public/images/adminpanel/Group 38.png" alt="" />
 </div>
 
-<div class="form-check form-check-inline">
-<input dir='rtl' type="text"  className='Promoted-input'/>
+<div class="form-check form-check-inline prom-form-check">
+  <div className='prom-input-div'>
+    <input dir='rtl' type="text"  className='Promoted-input'/>
 <p>ماه</p>
+  </div>
+
   <label class="form-check-label" for="inlineRadio3"> پروموت</label>
   <img src="../../public/images/adminpanel/🦆 icon _voice ok_.png" alt="" />
 </div>
@@ -40,9 +43,13 @@ export default function AdminPanelStudioSection(props) {
 
     <div className='AdminPanelStudioSection-details'>
         <div className='AdminPanelStudioSection-description'>
-            <input dir='rtl' type="text"  />
-            <img src="../../public/images/adminpanel/Group 37.png" alt="" />
+          <div className='active-input-div'> 
+               <input dir='rtl' type="text"  />
+            
             <p>ماه</p>
+          </div>
+         
+            <img src="../../public/images/adminpanel/Group 37.png" alt="" />
         </div>
         <div className='AdminPanelStudioSection-details-button'>
          <button>ثبت</button>
