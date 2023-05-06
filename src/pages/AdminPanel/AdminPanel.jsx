@@ -15,11 +15,12 @@ export default function AdminPanel() {
   
   const getStudio=()=>{
     const localStorageData = JSON.parse(localStorage.getItem("user"));
+    console.log(localStorageData);
     if (radioStatus=='همه') {
       setloader(true)
     fetch('https://api.seartudio.com/admin/getAllStudios',{
       headers:{
-        authorization : `${localStorageData.token}`
+        authorization : localStorageData.token
       }
     })
     .then(res =>res.json())
