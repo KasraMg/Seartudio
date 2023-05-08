@@ -51,3 +51,6 @@
   
     background-color: blue;
   }
+  .swal-button--cancel{
+    color: white !important;
+  }

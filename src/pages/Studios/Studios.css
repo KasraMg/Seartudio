@@ -164,3 +164,92 @@ margin-bottom: 4rem;
         margin-top:2rem ;
     }
 }
+
+.Studios .EmailLoading-loader {
+    left: 0 !important;
+    top: 44% !important;
+}
+.studio_not_found{
+display: block;
+margin-left: auto;
+margin-right: auto;
+font-family: vazir;
+direction: rtl;
+width: max-content;
+margin-top: 2rem;
+}
+
+
+
+.air-section{
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    border-radius: 30px;
+    background: linear-gradient(112.88deg, #CD6767 -4.69%, #484848 81.23%);
+    overflow: hidden;
+  }
+  .air-section p{
+    position: relative;
+    margin-top: 3rem;
+    font-family: vazir;
+    direction: rtl;
+  }
+  .air-section .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px
+  }
+  .air-section .air.air1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  .air-section .air.air2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  .air-section .air.air3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  .air-section .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
+  .infinite-scroll-component {
+    overflow: unset !important;
+  }

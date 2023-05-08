@@ -92,7 +92,7 @@ export default function AdminPanelStudioSection(props) {
           let formData = new FormData();
       formData.append("studioId", props.studioId);
       formData.append("subscriptionMonths",ActiveInput);
-      fetch('https://api.seartudio.com/admin/studioVerification',{
+      fetch('https://api.seartudio.com/admin/activateStudio',{
         method:'POST',
         headers:{
           authorization : localStorageData.token

@@ -4,12 +4,14 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { useParams } from 'react-router-dom'
 import Loader from '../../components/Loader/Loader'
+import { useNavigate } from 'react-router-dom'
 import { Image, Shimmer } from 'react-shimmer'
+import swal from 'sweetalert'
 export default function StudioPage() {
     const [studioData, setStudioData] = useState()
     const studioId = useParams()
     const [isLoading, setIsLoading] = useState();
-
+    const navigate=useNavigate()
     const getData = () => {
         setIsLoading(true)
         fetch(`https://api.seartudio.com/studio/id/${studioId.id}`)
@@ -17,8 +19,17 @@ export default function StudioPage() {
             .then(data => {
                 setStudioData(data.data)
                 console.log(data.data);
-               
+             console.log(data);
                     setIsLoading(false)
+
+                    if (data.statusCode == 404) {
+                        // swal({
+                        //     title:'استدیویی با این نام پیدا نشد.',
+                        //     icon:'error',
+                        //     buttons:'ok'
+                        // })
+                        navigate('/')
+                    }
               
             })
     }

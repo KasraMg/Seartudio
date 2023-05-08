@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import StudioPanel from "./pages/StudioPanel/StudioPanel";
 import AdminPanel from "./pages/AdminPanel/AdminPanel";
 import StudioPage from "./pages/StudioPage/StudioPage";
+import StudioPrivate from "./components/Private/StudioPrivate";
 import AdminPrivate from "./components/Private/AdminPrivate";
 const routes = [
   { path: "/", element: <Index /> },
@@ -18,7 +19,10 @@ const routes = [
   { path: "/Login", element: <Login /> },
   { path: "/Studios", element: <Studios /> },
   { path: "/SignUp", element: <SignUp /> },
-  { path: "/StudioPanel", element: <StudioPanel /> },
+  { path: "/StudioPanel", element:(
+    <StudioPrivate>
+      <StudioPanel /> 
+    </StudioPrivate>) },
   {
     path: "/AdminPanel", element: (
       <AdminPrivate>

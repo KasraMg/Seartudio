@@ -14,7 +14,7 @@ const [studio,setStudio]=useState()
      fetch('https://api.seartudio.com/')
      .then(res=>res.json())
      .then(data=>setStudio(data.data))
-        console.log(studio);
+       
     }, [])
   
     return (

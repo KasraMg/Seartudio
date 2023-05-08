@@ -83,3 +83,16 @@
        
     } 
 }
+
+.edit-btn-disabled{
+    opacity: .7;
+}
+
+.file-input-parent input{
+    opacity: .7;
+    cursor: auto !important;
+    z-index: 999;
+}
+.sign-up-studio-span{
+    cursor: default;
+}

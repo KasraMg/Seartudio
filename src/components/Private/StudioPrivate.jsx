@@ -1,22 +1,23 @@
-import React, { useContext,useEffect, useState } from 'react'
+import React, { useContext,useState } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AuthContext from '../../Context/authContext'
-export default function AdminPrivate({ children }) {
+
+export default function StudioPrivate({ children }) {
    const [privateLoader,setPrivateLoader]=useState(true)
     const authContext = useContext(AuthContext)
     const navigate = useNavigate()
 
-    useEffect(() => {
-      if ( authContext.userRole  && authContext.userRole === 'admin' ) {
-        setPrivateLoader(false)
-      }
-      
-    }, [ authContext.userRole ])
+  useEffect(() => {
+    if ( authContext.userRole  && authContext.userRole === 'studio' ) {
+      setPrivateLoader(false)
+    }
     
+  }, [ authContext.userRole ])
+  
     
   return (
     <>
-
 {privateLoader &&(
    <div class="private-loader"> 
    <div class="preloader">
@@ -88,14 +89,21 @@ export default function AdminPrivate({ children }) {
   </div>     
     </div>
 )}
-
+    
     {
+       authContext.userRole  && authContext.userRole === 'studio' ?
+        <>
        
-       authContext.userRole  && authContext.userRole === 'admin' ? <>{children}</> : navigate('/login')
+        {
+        children
+        }
+        </> 
+        : navigate('/login')
         
       
   
     }
+   
   </>
   )
 }
