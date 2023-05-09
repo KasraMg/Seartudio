@@ -62,7 +62,7 @@ const authContext = useContext(AuthContext);
                   
                     <div>
                         <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='ایمیل...' />
-                        <input value={password} onChange={(e)=>setPassword(e.target.value)} className='mt-4' type="text" placeholder='رمز عبور...' />
+                        <input value={password} onChange={(e)=>setPassword(e.target.value)} className='mt-4' type="password" placeholder='رمز عبور...' />
                         <button onClick={loginHandler} className='mt-5'>ورود</button>
                     </div>
                     <img src="../../public/images/similar/Group 22.png" alt="" />
