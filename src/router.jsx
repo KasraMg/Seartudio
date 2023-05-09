@@ -15,7 +15,7 @@ const routes = [
   { path: "/", element: <Index /> },
   { path: "/Rules", element: <Rules /> },
   { path: "/AboutUs", element: <AboutUs /> },
-  { path: "/*", element: <NotFound /> },
+  { path: "/notfound", element: <NotFound /> },
   { path: "/Login", element: <Login /> },
   { path: "/Studios", element: <Studios /> },
   { path: "/SignUp", element: <SignUp /> },
@@ -30,6 +30,7 @@ const routes = [
       </AdminPrivate>)
   },
   { path: "/StudioPage/:id", element: <StudioPage /> },
+  { path: "/:id", element: <StudioPage /> },
 
 ];
 

@@ -23,12 +23,8 @@ export default function StudioPage() {
                     setIsLoading(false)
 
                     if (data.statusCode == 404) {
-                        // swal({
-                        //     title:'استدیویی با این نام پیدا نشد.',
-                        //     icon:'error',
-                        //     buttons:'ok'
-                        // })
-                        navigate('/')
+                     
+                        navigate('/notfound')
                     }
               
             })

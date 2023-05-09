@@ -5,7 +5,7 @@ import AuthContext from '../../Context/authContext'
 import swal from 'sweetalert'
 export default function Header() {
     const authContext = useContext(AuthContext)
-    const [name, setName] = useState()
+
     const navigate= useNavigate()
   
 
@@ -18,6 +18,7 @@ export default function Header() {
             if (res) {
                 authContext.logout()
                 authContext.setUserInfos({})
+                location.reload()
             }
         }
         )
