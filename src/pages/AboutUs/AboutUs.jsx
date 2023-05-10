@@ -38,7 +38,7 @@ export default function AboutUs() {
                 </p>
                 </div>
                 <p className='AboutUs-title-2'>درباره ما:</p>
-        <img className='AboutUs-main-img' src="../../public/images/similar/Character.png" alt="" />
+        <img className='AboutUs-main-img' src="../images/similar/Character.png" alt="" />
 
             </main>
     </div>

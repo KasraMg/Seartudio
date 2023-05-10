@@ -61,16 +61,16 @@ const authContext = useContext(AuthContext);
                 <section>
                   
                     <div>
-                        <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='ایمیل...' />
-                        <input value={password} onChange={(e)=>setPassword(e.target.value)} className='mt-4' type="password" placeholder='رمز عبور...' />
+                        <input autoComplete='off' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='ایمیل...' />
+                        <input autoComplete='off' value={password} onChange={(e)=>setPassword(e.target.value)} className='mt-4' type="password" placeholder='رمز عبور...' />
                         <button onClick={loginHandler} className='mt-5'>ورود</button>
                     </div>
-                    <img src="./images/similar/Group 22.png" alt="" />
+                    <img src="../images/similar/Group 22.png" alt="" />
                 </section>
                 <div className='login-footer'>
                     
                     <p>قدرت گرفته از</p>
-                    <a href="https://instagram.com/masir_business/"><img src="./images/similar/New Project (99) 3.png" alt="" /></a>
+                    <a href="https://instagram.com/masir_business/"><img src="../images/similar/New Project (99) 3.png" alt="" /></a>
                 </div>
             </main>
             {loader &&(

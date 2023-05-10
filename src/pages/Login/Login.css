@@ -30,13 +30,13 @@
     color: rgba(255, 255, 255, 0.475) !important;
 }
 .Login input:nth-child(1){
-    background-image: url(../../../public/images/similar/Group\ 26.png);
+    background-image: url(../images/similar/Group\ 26.png);
     background-repeat: no-repeat;
     background-position: 353px 3px;
     background-size: 37px 37px;
 }
 .Login input:nth-child(2){
-    background-image: url(../../../public/images/similar/Group\ 27.png);
+    background-image: url(../images/similar/Group\ 27.png);
     background-repeat: no-repeat;
     background-position: 353px 3px;
     background-size: 37px 37px;

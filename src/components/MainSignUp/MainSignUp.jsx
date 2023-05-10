@@ -149,15 +149,15 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
             
 
             <main dir='rtl'>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='نام استودیو(فارسی)' />
+                <input autoComplete='off' type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='نام استودیو(فارسی)' />
 
-                <input type="text" value={studioId} onChange={(e) => setStudioId(e.target.value)} placeholder='شناسه استودیو(انگلیسی و کوتاه)' />
+                <input autoComplete='off' type="text" value={studioId} onChange={(e) => setStudioId(e.target.value)} placeholder='شناسه استودیو(انگلیسی و کوتاه)' />
 
-                <input type="text" value={address} onChange={(e) => setAddressValue(e.target.value)} placeholder='آدرس دقیق...' />
+                <input autoComplete='off' type="text" value={address} onChange={(e) => setAddressValue(e.target.value)} placeholder='آدرس دقیق...' />
 
-                <input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder='شماره تماس (انگلیسی)' />
+                <input autoComplete='off' type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder='شماره تماس (انگلیسی)' />
 
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='ایمیل شما (ترجیحا رسمی)' />
+                <input autoComplete='off' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='ایمیل شما (ترجیحا رسمی)' />
 
                 <Dropdown className='cyties-dropDown '>
                     <Dropdown.Toggle id="dropdown-basic">
