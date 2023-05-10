@@ -53,7 +53,7 @@ export default function Footer() {
     }
     return (
         <footer className='main_footer'>
-           <Link to='/'> <img src="./images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
+           <Link to='/'> <img src="../images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
             <main>
                      <div>
                 <ul>
@@ -71,7 +71,7 @@ export default function Footer() {
                 <p className='mt-3'>عضویت در خبرنامه</p>
                 <div>
                     <input value={emailValue} onChange={(e)=>setEmailValue(e.target.value)} type="text" dir='ltr' placeholder='Your Email'/>
-                    <span style={{cursor:'pointer'}} onClick={emailRigester}><img src="./images/index/Clip path group.png" alt="" /></span>
+                    <span style={{cursor:'pointer'}} onClick={emailRigester}><img src="../images/index/Clip path group.png" alt="" /></span>
                 </div>
             </section>
             </main>
@@ -82,7 +82,7 @@ export default function Footer() {
        onHide={status201Hide}
        info={false}>
       
-      <img height={100} width={100} style={{margin:'0 auto .8rem auto',display:'block'}}  src="./images/similar/Group 39.png" alt="" />
+      <img height={100} width={100} style={{margin:'0 auto .8rem auto',display:'block'}}  src="../images/similar/Group 39.png" alt="" />
       <br />
 <p>ایمیل شما با موفقیت ثبت شد.</p>
 
@@ -106,7 +106,7 @@ export default function Footer() {
        onHide={status400Hide}
        info={false}>
       
-      <img height={100} width={100} style={{margin:'0 auto .8rem auto',display:'block'}}  src="./images/similar/Group 40.png" alt="" />
+      <img height={100} width={100} style={{margin:'0 auto .8rem auto',display:'block'}}  src="../images/similar/Group 40.png" alt="" />
       <br />
 <p>شما در خبرنامه ثبت نام کرده اید.</p>
 
