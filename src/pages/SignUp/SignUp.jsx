@@ -28,7 +28,7 @@ export default function SignUp() {
           <span>!توضیحات کامل ثبت استودیو رو از <a href='https://t.me/seartudio_support'>اینجا</a> ببین</span>
         </div>
 
-        <img src="../../public/images/signup/Group 29.png" alt="" />
+        <img src="../images/signup/Group 29.png" alt="" />
       </section>
 
      

@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     background-position: 98%8px;
     background-size: 37px 37px;
-    background-image: url(../../../public/images/signup/Group\ 30.png);
+    background-image: url(../images/signup/Group\ 30.png);
 }
 @media (max-width:967px) {
     .create-studio textarea{
@@ -60,56 +60,56 @@
     color: rgba(255, 255, 255, 0.5);
 }
 .create-studio input:nth-child(1){
-    background-image: url(../../../public/images/similar/Group\ 26.png);
+    background-image: url(../images/similar/Group\ 26.png);
 }
 .create-studio input:nth-child(2){
-    background-image: url(../../../public/images/signup/Group\ 30.png);
+    background-image: url(../images/signup/Group\ 30.png);
 }
 .create-studio input:nth-child(3){
-    background-image: url(../../../public/images/signup/Vector.png);
+    background-image: url(../images/signup/Vector.png);
 }
 .create-studio input:nth-child(4){
-    background-image: url(../../../public/images/signup/phone.png);
+    background-image: url(../images/signup/phone.png);
 }
 .create-studio input:nth-child(5){
-    background-image: url(../../../public/images/signup/Group\ 31.png);
+    background-image: url(../images/signup/Group\ 31.png);
 }
 .create-studio input:nth-child(6){
-    background-image: url(../../../public/images/signup/Group\ 28.png);
+    background-image: url(../images/signup/Group\ 28.png);
 }
 .create-studio input:nth-child(7){
-    background-image: url(../../../public/images/signup/Group\ 32.png);
+    background-image: url(../images/signup/Group\ 32.png);
 }
 .create-studio input:nth-child(8){
-    background-image: url(../../../public/images/signup/Group\ 322.png);
+    background-image: url(../images/signup/Group\ 322.png);
 }
 .create-studio input:nth-child(9){
-    background-image: url(../../../public/images/signup/Vector4.png);
+    background-image: url(../images/signup/Vector4.png);
 }
 
 .create-studio input:nth-child(10){
-    background-image: url(../../../public/images/signup/Vector5.png);
+    background-image: url(../images/signup/Vector5.png);
 }
 .create-studio input:nth-child(11){
-    background-image: url(../../../public/images/signup/Group\ 323.png);
+    background-image: url(../images/signup/Group\ 323.png);
 }
 .create-studio input:nth-child(12){
-    background-image: url(../../../public/images/signup/Group\ 324.png);
+    background-image: url(../images/signup/Group\ 324.png);
 }
 .create-studio input:nth-child(13){
-    background-image: url(../../../public/images/signup/Vector3.png);
+    background-image: url(../images/signup/Vector3.png);
 }
 
 
 
 .create-studio .cyties-dropDown .dropdown-toggle{
-    background-image: url(../../../public/images/signup/Group\ 325.png);
+    background-image: url(../images/signup/Group\ 325.png);
 }
 .licens-dropDown .dropdown-toggle{
-    background-image: url(../../../public/images/signup/Group\ 322.png); 
+    background-image: url(../images/signup/Group\ 322.png); 
 }
 .studio-type-dropDown .dropdown-toggle{
-    background-image: url(../../../public/images/signup/Vector5.png); 
+    background-image: url(../images/signup/Vector5.png); 
 }
 .rules-div{
     background-color: #EC4141 !important;
@@ -240,14 +240,14 @@
 }
 
 .logo-input{
-    background-image: url(../../../public/images/signup/Group\ 323.png) !important;
+    background-image: url(../images/signup/Group\ 323.png) !important;
     background-position-y: 8px !important;
     
     font-size: .8rem;
     letter-spacing: .4px;
 }
 .picture-input{
-    background-image: url(../../../public/images/signup/Group\ 324.png) !important;
+    background-image: url(../images/signup/Group\ 324.png) !important;
     background-position-y: 8px !important;
    
     font-size: .8rem;
