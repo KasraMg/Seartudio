@@ -88,7 +88,7 @@
     opacity: .7;
 }
 
-.file-input-parent input{
+.StudioPanel .file-input-parent input{
     opacity: .7;
     cursor: auto !important;
     z-index: 999;

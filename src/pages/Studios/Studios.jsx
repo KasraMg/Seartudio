@@ -15,21 +15,25 @@ export default function Studios() {
     const [type, setType] = useState('همه')
     const [skip, setSkip] = useState(0)
     const [notFound, setNotFounde] = useState(false)
-    const [loader, setLoader] = useState()
+    const [loader, setLoader] = useState(true)
     const [more,setmore]=useState(true)
     const [fetchAgain,setFetchAgain]=useState(false)
-
+    const [changeStatus,setchangeStatus]=useState(false)
   
 
     useEffect(() => {
-        setLoader(true)
         fetch(`https://api.seartudio.com/studio?type=${type}&license=${license}&province=${city}&skip=${skip}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 console.log(data);
                 if (data.statusCode ==404) {
-                    setAllData('');
+                    if (changeStatus) {
+                        setAllData('');
+                        setmore(false)
+                        setchangeStatus(false)
+                    }
+                  
                     setmore(false)
                   
                 }else{
@@ -83,6 +87,7 @@ export default function Studios() {
                                 {Allprovinces.map(data => (
                                     <Dropdown.Item  onClick={() =>{
      
+                                        setchangeStatus(true)
                                         setSkip(0)
                                         setCity(data)}}>{data}</Dropdown.Item>
                                 ))}
@@ -99,11 +104,13 @@ export default function Studios() {
 
                             <Dropdown.Menu>
                                 <Dropdown.Item onClick={() =>{
+                                     setchangeStatus(true)
                                      setSkip(0)
                                     setFetchAgain(true)
                                     setType('حرفه ای')}
                                     } >حرفه ای </Dropdown.Item>
                                 <Dropdown.Item onClick={() =>{
+                                     setchangeStatus(true)
                                      setSkip(0)
                                       setFetchAgain(true)
                                     setType('خانگی')}
@@ -122,10 +129,12 @@ export default function Studios() {
 
                         <Dropdown.Menu>
                             <Dropdown.Item onClick={() => {
+                                setchangeStatus(true)
                                 setSkip(0)
                                 setLicense('دارد')}
                                 }>دارد</Dropdown.Item>
                             <Dropdown.Item onClick={() => {
+                                 setchangeStatus(true)
                                  setSkip(0)
                                 setLicense('ندارد')
                                 }}>ندارد </Dropdown.Item>
@@ -135,7 +144,7 @@ export default function Studios() {
                 </div>
             </div>
 
-            {notFound && (
+            {notFound && !allData &&(
               
                 <section className='air-section'>
                 <p>استودیویی با این مشخصات یافت نشد :))</p>

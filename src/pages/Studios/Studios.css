@@ -179,8 +179,12 @@ width: max-content;
 margin-top: 2rem;
 }
 
-
-
+@media (max-width:500px) {
+    .air-section{
+        padding:0rem 1rem;
+        line-height: 1.7rem;
+    }
+}
 .air-section{
     text-align: center;
     color: white;
