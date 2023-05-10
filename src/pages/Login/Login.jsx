@@ -65,12 +65,12 @@ const authContext = useContext(AuthContext);
                         <input value={password} onChange={(e)=>setPassword(e.target.value)} className='mt-4' type="password" placeholder='رمز عبور...' />
                         <button onClick={loginHandler} className='mt-5'>ورود</button>
                     </div>
-                    <img src="../../public/images/similar/Group 22.png" alt="" />
+                    <img src="./images/similar/Group 22.png" alt="" />
                 </section>
                 <div className='login-footer'>
                     
                     <p>قدرت گرفته از</p>
-                    <a href="https://instagram.com/masir_business/"><img src="../../public/images/similar/New Project (99) 3.png" alt="" /></a>
+                    <a href="https://instagram.com/masir_business/"><img src="./images/similar/New Project (99) 3.png" alt="" /></a>
                 </div>
             </main>
             {loader &&(

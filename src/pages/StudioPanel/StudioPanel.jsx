@@ -35,14 +35,14 @@ export default function StudioPanel() {
           <div className='StudioPanel-status' dir='rtl'>
             <p>وضعیت استودیو شما:</p>
           {authContext.userInfos.isActive ?(
-      <img src="../../public/images/studiopanel/Group 34.png" alt="" />
+      <img src="./images/studiopanel/Group 34.png" alt="" />
           ):(
-             <img src="../../public/images/studiopanel/Group 32.png" alt="" />
+             <img src="./images/studiopanel/Group 32.png" alt="" />
           )}
            
             <p className='mt-4'> درباره پشتیبانی</p>
 
-            <a href="https://t.me/seartudio_support"><img src="../../public/images/studiopanel/Group 33.png" alt="" /></a>
+            <a href="https://t.me/seartudio_support"><img src="./images/studiopanel/Group 33.png" alt="" /></a>
           </div>
 
           <div className="your-studio">

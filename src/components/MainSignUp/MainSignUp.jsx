@@ -192,7 +192,7 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
 
                 <div className='telegram-input'>
                     <input value={telId} onChange={(e) => setTelId(e.target.value)} type="text" placeholder='شناسه تلگرامی' />
-                    <img onClick={() => setTelgramModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setTelgramModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <Dropdown className='studio-type-dropDown'>
@@ -216,7 +216,7 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                         <p className='sign-up-logo-span'>تصویر لوگو</p>
                     )}
                     
-                    <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <div className='file-input-parent'>
@@ -225,7 +225,7 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                     {!image &&(
                        <p className='sign-up-studio-span'>تصویر استودیو</p>
                     )}
-                    <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='رمز عبور' />
@@ -233,9 +233,9 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                 <div className='rules-div'>
                     <p><Link to='/rules'>شرایط و قوانین</Link> سرتودیو را میپذیرم </p>
                     {rules ? (
-                        <img onClick={() => setRules(false)} src="../../public/images/signup/photo_5949261142641720371_m.jpg" alt="Logo" />
+                        <img onClick={() => setRules(false)} src="./images/signup/photo_5949261142641720371_m.jpg" alt="Logo" />
                     ) : (
-                        <img onClick={() => setRules(true)} src="../../public/images/signup/Rectangle 39.png" alt="Logo" />
+                        <img onClick={() => setRules(true)} src="./images/signup/Rectangle 39.png" alt="Logo" />
                     )}
 
                 </div>

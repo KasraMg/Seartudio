@@ -25,7 +25,7 @@ export default function Header() {
     }
     return (
         <header className='main_header'>
-            <Link to="/"><img src="../../public/images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
+            <Link to="/"><img src="./images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
             <section>
                 {authContext.userInfos.name ? (
                     <div onClick={userLogOut}><button className='create-studio-btn'>خروج از اکانت</button></div>

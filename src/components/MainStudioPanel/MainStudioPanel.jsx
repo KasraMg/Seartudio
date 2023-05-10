@@ -261,7 +261,7 @@ console.log(data);
                         setTelId(e.target.value)
                     }
                     } type="text" placeholder='شناسه تلگرامی' />
-                    <img onClick={() => setTelgramModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setTelgramModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <Dropdown className='studio-type-dropDown'>
@@ -294,7 +294,7 @@ console.log(data);
                         <p className='sign-up-logo-span'>به زودی ...</p>
                     )}
 
-                    <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
 
@@ -304,7 +304,7 @@ console.log(data);
                     {!image && (
                         <p className='sign-up-studio-span'>به زودی ...</p>
                     )}
-                    <img onClick={() => setStudioModalShow(true)} src="../../public/images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <textarea value={description} onChange={(e) => {

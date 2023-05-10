@@ -52,7 +52,7 @@ export default function StudioPage() {
                                 )}
                                 {studioData.isVeryfied && (
 
-                                    <img className='mx-2' src="../../public/images/similar/Group 38.png" alt="" />
+                                    <img className='mx-2' src="./images/similar/Group 38.png" alt="" />
 
 
                                 )}
@@ -81,32 +81,32 @@ export default function StudioPage() {
                         <main>
                             <div>
                                 <p>{studioData.province}</p>
-                                <img src="../../public/images/studiopage/Group 325.png" alt="" />
+                                <img src="./images/studiopage/Group 325.png" alt="" />
                             </div>
                             <div>
                                 <p>{studioData.phoneNumber}</p>
-                                <img src="../../public/images/studiopage/phone.png" alt="" />
+                                <img src="./images/studiopage/phone.png" alt="" />
                             </div>
 
                             <div>
                                 <p> مجوز {studioData.license} </p>
-                                <img src="../../public/images/studiopage/Group 322.png" alt="" />
+                                <img src="./images/studiopage/Group 322.png" alt="" />
                             </div>
                             <div>
                                 <p>{studioData.email}</p>
-                                <img src="../../public/images/studiopage/Group 31.png" alt="" />
+                                <img src="./images/studiopage/Group 31.png" alt="" />
                             </div>
                             <div>
                                 <p> {studioData.type}</p>
-                                <img src="../../public/images/studiopage/Vector5.png" alt="" />
+                                <img src="./images/studiopage/Vector5.png" alt="" />
                             </div>
                             <div>
                                 <p>{Intl.NumberFormat().format(studioData.pricePerHour)}</p>
-                                <img src="../../public/images/studiopage/Group 32.png" alt="" />
+                                <img src="./images/studiopage/Group 32.png" alt="" />
                             </div>
                             <div>
                                 <p>{studioData.address}</p>
-                                <img src="../../public/images/studiopage/Vector.png" alt="" />
+                                <img src="./images/studiopage/Vector.png" alt="" />
                             </div>
                         </main>
                     </div>

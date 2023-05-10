@@ -32,7 +32,7 @@ export default function Rules() {
                 </p>
                 </div>
                 <p className='rules-title-2'>قوانین و مقررات:</p>
-        <img className='rules-main-img' src="../../public/images/similar/amico.png" alt="" />
+        <img className='rules-main-img' src="./images/similar/amico.png" alt="" />
 
             </main>
         </div>

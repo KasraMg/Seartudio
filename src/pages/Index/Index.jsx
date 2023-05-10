@@ -30,7 +30,7 @@ const [studio,setStudio]=useState()
                     <Link to='/SignUp'><button>بزن بریم</button></Link>
                 </div>
 
-                <img src="../../public/images/index/rafiki.png" alt="" />
+                <img src="./images/index/rafiki.png" alt="" />
             </section>
 
             <section className='index-find-studio'>
@@ -41,7 +41,7 @@ const [studio,setStudio]=useState()
                     <Link to='/Studios'><button>بزن بریم</button></Link>
                 </div>
 
-                <img src="../../public/images/index/bro.png" alt="" />
+                <img src="./images/index/bro.png" alt="" />
             </section>
 
             <div className="index-studios">
@@ -62,13 +62,13 @@ const [studio,setStudio]=useState()
             </div>
 
             <section className='index-instagram'>
-                <img className='main-index-instagram-img' src="../../public/images/index/bro2.png" alt="" />
+                <img className='main-index-instagram-img' src="./images/index/bro2.png" alt="" />
                 <div>
-                    <img src="../../public/images/index/New Project (99) 2.png" alt="" />
+                    <img src="./images/index/New Project (99) 2.png" alt="" />
                     <p className='index-instagram-title'>مسیر بیزنس پلتفرم پخش بین المللی</p>
                     <a href="https://instagram.com/masir_business/" style={{ color: 'black', textDecoration: 'none' }}>
                         <div>
-                            <img className='index-instagram-icon' src="../../public/images/index/🦆 icon _rounded instagram_.png" alt="" />
+                            <img className='index-instagram-icon' src="./images/index/🦆 icon _rounded instagram_.png" alt="" />
                             <p>masir_business</p>
 
                         </div>

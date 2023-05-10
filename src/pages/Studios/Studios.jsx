@@ -77,7 +77,7 @@ export default function Studios() {
 
                 <section>
                     <div className='studios-cyties'>
-                        <img src="../../public/images/studios/Group 28.png" alt="" />
+                        <img src="./images/studios/Group 28.png" alt="" />
                         <Dropdown className='cyties-dropDown'>
                             <Dropdown.Toggle id="dropdown-basic">
                                 {city == 'همه' ? 'استان' : city}
@@ -96,7 +96,7 @@ export default function Studios() {
                         </Dropdown>
                     </div>
                     <div className='studios-type'>
-                        <img src="../../public/images/studios/Vector.png" alt="" />
+                        <img src="./images/studios/Vector.png" alt="" />
                         <Dropdown>
                             <Dropdown.Toggle id="dropdown-basic">
                                 {type == 'همه' ? 'نوع استودیو' : type}
@@ -121,7 +121,7 @@ export default function Studios() {
                     </div>
                 </section>
                 <div className="studios-licens">
-                    <img src="../../public/images/studios/Group 29.png" alt="" />
+                    <img src="./images/studios/Group 29.png" alt="" />
                     <Dropdown>
                         <Dropdown.Toggle id="dropdown-basic">
                             {license == 'همه' ? 'وضعیت مجوز' : license}

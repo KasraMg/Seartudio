@@ -6,7 +6,7 @@ export default function NotFound() {
     <div className='Not-Found'>
         <CustomHeader/>
         <main>
-            <img src="../../public/images/similar/Group 24.png" alt="404" />
+            <img src="./images/similar/Group 24.png" alt="404" />
             <p className='mt-4'>گشتم <span>نبود</span>!</p>
             <p><span>نگرد</span> که نیست ):</p>
         </main>
