@@ -30,13 +30,13 @@ const authContext = useContext(AuthContext);
                     if (res.data.admin) {
                           authContext.login([res.data.admin],res.data.jwt);
                          
-                            navigate("/");
+                            navigate("/adminPanel");
                           
                   
                     }else{
                         authContext.login([res.data.studioData],res.data.jwt);
                        
-                            navigate("/");
+                            navigate("/studioPanel");
                         
                     }
                   
