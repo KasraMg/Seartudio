@@ -57,5 +57,7 @@ width: 240px;
         display: block;
     }.main_header a{
         width: 100%;
+    }.main_header section div{
+        width: 100%;
     }
 }

@@ -28,7 +28,7 @@ export default function Header() {
             <Link to="/"><img src="../images/similar/New Project (1) 2.svg" alt="Logo" /></Link>
             <section>
                 {authContext.userInfos.name ? (
-                    <div onClick={userLogOut}><button className='create-studio-btn'>خروج از اکانت</button></div>
+                    <div  onClick={userLogOut}><button className='create-studio-btn'>خروج از اکانت</button></div>
                 ) : (
                     <Link style={{ textDecoration: 'none' }} to='/signup'><button className='create-studio-btn'>ثبت استدویو</button></Link>
                 )}

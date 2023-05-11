@@ -82,7 +82,32 @@ export default function App() {
       setIsLoggedIn(false)
     }
   });
-
+  useEffect(() => {
+    const localStorageData = JSON.parse(localStorage.getItem("user"));
+    console.log(localStorageData);
+    if (localStorageData) {
+      fetch(`https://api.seartudio.com/studio/getMe`, {
+        headers: {
+          authorization: localStorageData.token,
+        },
+      })
+        .then((res) => res.json())
+        .then((userData) => {
+          console.log(userData);
+          setIsLoggedIn(true);
+          setUserInfos(userData.data);
+          if (userData.data.admin) {
+               setuserRole(userData.data.admin.role)
+          }else{
+             setuserRole(userData.data.role)
+          }
+       
+         
+        });
+    } else {
+      setIsLoggedIn(false)
+    }
+  },[]);
 
   return (
     <>
