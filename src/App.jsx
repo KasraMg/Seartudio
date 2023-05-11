@@ -31,7 +31,7 @@ export default function App() {
   useEffect(() => {
 
     const localStorageData = JSON.parse(localStorage.getItem("user"));
-    console.log(localStorageData);
+
     if (localStorageData) {
       fetch(`https://api.seartudio.com/studio/getMe`, {
         headers: {
@@ -58,7 +58,7 @@ export default function App() {
   
   useEffect(() => {
     const localStorageData = JSON.parse(localStorage.getItem("user"));
-    console.log(localStorageData);
+  
     if (localStorageData) {
       fetch(`https://api.seartudio.com/studio/getMe`, {
         headers: {
@@ -67,7 +67,7 @@ export default function App() {
       })
         .then((res) => res.json())
         .then((userData) => {
-          console.log(userData);
+      
           setIsLoggedIn(true);
           setUserInfos(userData.data);
           if (userData.data.admin) {
@@ -84,7 +84,7 @@ export default function App() {
   });
   useEffect(() => {
     const localStorageData = JSON.parse(localStorage.getItem("user"));
-    console.log(localStorageData);
+  
     if (localStorageData) {
       fetch(`https://api.seartudio.com/studio/getMe`, {
         headers: {
@@ -93,10 +93,11 @@ export default function App() {
       })
         .then((res) => res.json())
         .then((userData) => {
-          console.log(userData);
+        
           setIsLoggedIn(true);
           setUserInfos(userData.data);
-          if (userData.data.admin) {
+
+          if (userData.data && userData.data.admin) {
                setuserRole(userData.data.admin.role)
           }else{
              setuserRole(userData.data.role)

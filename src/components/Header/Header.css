@@ -14,6 +14,11 @@ background-color: #FF0000;
 color: white;
 border: none;
 }
+.admin-btn{
+    background-color: #ffffff;
+color: rgb(254, 0, 0);
+border: 1px solid red;
+}
 .login-btn button{
     background-color: white;
     color: #FF0000;

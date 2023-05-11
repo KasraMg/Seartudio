@@ -44,7 +44,7 @@ const authContext = useContext(AuthContext);
                 else if(  res.statusCode == 401){
                     setError401(true)
                 }
-                console.log(res)
+                
             })
           
     }
