@@ -143,16 +143,16 @@ export default function AdminPanelStudioSection(props) {
               <img className='image-check' onClick={() => {
                 setVerify(false)
                 setverifycheck(true)}}
-                 src="./images/signup/photo_5949261142641720371_m.jpg" alt="Logo" />
+                 src="../images/signup/photo_5949261142641720371_m.jpg" alt="Logo" />
             ) : (
               <img className='image-check' onClick={() => {
                 setVerify(true)
                 setverifycheck(true)}}
-                 src="./images/signup/Rectangle 39.png" alt="Logo" />
+                 src="../images/signup/Rectangle 39.png" alt="Logo" />
             )}
 
             <label class="form-check-label" for="inlineRadio1">وریفای</label>
-            <img src="./images/adminpanel/Group 38.png" alt="" />
+            <img src="../images/adminpanel/Group 38.png" alt="" />
           </div>
               
           <div class="form-check form-check-inline prom-form-check">
@@ -169,9 +169,9 @@ export default function AdminPanelStudioSection(props) {
             <label class="form-check-label" for="inlineRadio3"> پروموت</label>
 
             {props.isPromoted ?(
-              <img src="./images/studiopanel/🦆 icon _voice ok_.png" alt="" />
+              <img src="../images/studiopanel/🦆 icon _voice ok_.png" alt="" />
             ):(
-              <img src="./images/adminpanel/🦆 icon _voice ok_.png" alt="" />
+              <img src="../images/adminpanel/🦆 icon _voice ok_.png" alt="" />
             )}
            
           </div>
@@ -193,9 +193,9 @@ export default function AdminPanelStudioSection(props) {
             <p>ماه</p>
           </div>
               {props.isActive ?(
-                <img src="./images/adminpanel/Group 37.png" alt="" />
+                <img src="../images/adminpanel/Group 37.png" alt="" />
               ):(
-                <img src="./images/adminpanel/Group 37.png" alt="" />
+                <img src="../images/adminpanel/Group 37.png" alt="" />
               )}
           
         </div>
