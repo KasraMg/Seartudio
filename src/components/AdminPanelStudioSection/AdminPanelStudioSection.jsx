@@ -133,7 +133,7 @@ export default function AdminPanelStudioSection(props) {
       <div className='Intro-Studio-Section-title'>
         <div>
           <p className='AdminPanelStudioSection-title' > {props.name}</p>
-          <button><a style={{ color: 'black' }} target='_blank' href={`/StudioPage/${props.studioId}`}>مشاهده</a></button>
+          <button><a style={{ color: 'black' }}  href={`/StudioPage/${props.studioId}`}>مشاهده</a></button>
         </div>
 
 
