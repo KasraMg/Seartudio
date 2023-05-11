@@ -46,6 +46,9 @@
         direction: rtl;
     }
 
+    .AdminPanel .EmailLoading-Loader-bg  {
+        background-color: rgb(0 0 0 / 1%) !important;
+    }
     .AdminPanel .EmailLoading-loader {
         left: 0 !important;
         top: 44% !important;

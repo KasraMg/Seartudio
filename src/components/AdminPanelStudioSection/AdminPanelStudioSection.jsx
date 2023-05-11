@@ -24,6 +24,7 @@ export default function AdminPanelStudioSection(props) {
  
  
     if (verifycheck) {
+      
       let formData = new FormData();
       formData.append("studioId", props.studioId);
       formData.append("status",verify);
@@ -129,7 +130,7 @@ export default function AdminPanelStudioSection(props) {
   }
   return (
     <section className='Intro-Studio-Section AdminPanelStudioSection'>
-      <img crossOrigin='anonymous' src={props.image} className='Intro-Studio-Section-absolute-img' alt="" />
+      <img  crossOrigin='anonymous' src={props.image} className='Intro-Studio-Section-absolute-img' alt="" />
       <div className='Intro-Studio-Section-title'>
         <div>
           <p className='AdminPanelStudioSection-title' > {props.name}</p>
