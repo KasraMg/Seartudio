@@ -54,7 +54,7 @@ export default function MainStudioPanel({ userInfo }) {
 
 
             fetch('https://api.seartudio.com/studio/update', {
-                method: 'POST',
+                method: 'PATCH',
                 headers: {
                     authorization: localStorageData.token
                 },
