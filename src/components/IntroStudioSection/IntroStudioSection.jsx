@@ -9,7 +9,7 @@ export default function IntroStudioSection(props) {
 
 return (
     <section className='Intro-Studio-Section'>
-      <Link to={`/StudioPage/${props.studioId}`}>
+      <Link to={`/studio/${props.studioId}`}>
       <img src={props.logo} crossOrigin='anonymous' className='Intro-Studio-Section-absolute-img' alt="" />
       <div className='Intro-Studio-Section-title'>
         <p >{props.name}</p>

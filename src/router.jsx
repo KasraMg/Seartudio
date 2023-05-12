@@ -13,23 +13,23 @@ import StudioPrivate from "./components/Private/StudioPrivate";
 import AdminPrivate from "./components/Private/AdminPrivate";
 const routes = [
   { path: "/", element: <Index /> },
-  { path: "/Rules", element: <Rules /> },
-  { path: "/AboutUs", element: <AboutUs /> },
+  { path: "/rules", element: <Rules /> },
+  { path: "/aboutUs", element: <AboutUs /> },
   { path: "/notfound", element: <NotFound /> },
-  { path: "/Login", element: <Login /> },
-  { path: "/Studios", element: <Studios /> },
-  { path: "/SignUp", element: <SignUp /> },
-  { path: "/StudioPanel", element:(
+  { path: "/login", element: <Login /> },
+  { path: "/studios", element: <Studios /> },
+  { path: "/signUp", element: <SignUp /> },
+  { path: "/studioPanel", element:(
     <StudioPrivate>
       <StudioPanel /> 
     </StudioPrivate>) },
   {
-    path: "/AdminPanel", element: (
+    path: "/adminPanel", element: (
       <AdminPrivate>
         <AdminPanel />
       </AdminPrivate>)
   },
-  { path: "/StudioPage/:id", element: <StudioPage /> },
+  { path: "/studio/:id", element: <StudioPage /> },
   { path: "/:id", element: <StudioPage /> },
 
 ];

@@ -27,7 +27,7 @@ const [studio,setStudio]=useState()
                     <p>استودیوت رو ثبت کن!</p>
                     <span>با ثبت استودیو خودت توی <strong> سرتودیو </strong>
                         خودت به آرتیست ها معرفی کن </span>
-                    <Link to='/SignUp'><button>بزن بریم</button></Link>
+                    <Link to='/signUp'><button>بزن بریم</button></Link>
                 </div>
 
                 <img src="./images/index/rafiki.png" alt="" />
@@ -38,7 +38,7 @@ const [studio,setStudio]=useState()
                     <p>استودیوت رو پیدا کن!</p>
                     <span>استدیو مناسب خودت رو با فیلتر های <strong> سرتودیو </strong>
                         پیدا کن و باهاشون همکاری کن</span>
-                    <Link to='/Studios'><button>بزن بریم</button></Link>
+                    <Link to='/studios'><button>بزن بریم</button></Link>
                 </div>
 
                 <img src="./images/index/bro.png" alt="" />
@@ -57,7 +57,7 @@ const [studio,setStudio]=useState()
             )}
                   
 
-                    <Link style={{textDecoration:'none'}} to='/Studios'><button>بیشتر</button></Link>
+                    <Link style={{textDecoration:'none'}} to='/studios'><button>بیشتر</button></Link>
                 </main>
             </div>
 

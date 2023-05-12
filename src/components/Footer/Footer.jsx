@@ -62,7 +62,7 @@ export default function Footer() {
                     <li><a href="https://instagram.com/masir_business/">مسیر بیزنس</a> </li>
 
                     <li><Link to='/rules'> قوانین و مقررا ت </Link></li>
-                    <li><Link to='/AboutUs'>درباره ما</Link> </li>
+                    <li><Link to='/aboutUs'>درباره ما</Link> </li>
                     <li> <a href="https://t.me/seartudio_support">پشتیبانی</a></li>
 
                 </ul>

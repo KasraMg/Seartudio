@@ -45,7 +45,7 @@ export default function Header() {
                 {authContext.userInfos.name ? (
                     <Link className='login-btn' to='/studioPanel'> <button>{authContext.userInfos.name}</button></Link>
                 ) : (
-                    <Link className='login-btn' to='/Login'> <button>ورود</button></Link>
+                    <Link className='login-btn' to='/login'> <button>ورود</button></Link>
                 )}
                 </>
             )}
