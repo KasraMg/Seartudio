@@ -9,14 +9,19 @@ import MainSignUp from '../../components/MainSignUp/MainSignUp';
 import MyVerticallyCenteredModal from '../../components/Modal/Modal';
 export default function SignUp() {
 
-  const [TelgramModalShow, setTelgramModalShow] = React.useState(false);
-  const [StudioModalShow, setStudioModalShow] = React.useState(false);
+  const [TelgramModalShow, setTelgramModalShow] = useState(false);
+  const [LogoModalShow, setLogoModalShow] = useState(false);
+    const [ImageModalShow, setImageModalShow] = useState(false);
   const TelegramonHide=()=>{
     setTelgramModalShow(false)
   }
-  const StudioonHide=()=>{
-    setStudioModalShow(false)
-  }
+  const LogoModalHide = () => {
+    setLogoModalShow(false)
+}
+const ImageModalHide = () => {
+    setImageModalShow(false)
+}
+
   return (
     <div className='SignUp'>
       <Header />
@@ -32,7 +37,7 @@ export default function SignUp() {
       </section>
 
      
-   <MainSignUp  setTelgramModalShow={setTelgramModalShow} setStudioModalShow={setStudioModalShow}/>
+   <MainSignUp  setLogoModalShow={setLogoModalShow} setTelgramModalShow={setTelgramModalShow} setImageModalShow={setImageModalShow}/>
 
 
     <MyVerticallyCenteredModal 
@@ -47,17 +52,24 @@ export default function SignUp() {
       </p>
       </MyVerticallyCenteredModal>
           
-      <MyVerticallyCenteredModal 
-       show={StudioModalShow}
-       onHide={StudioonHide}>
-      <p>
-      عکس لوگو و تصویر استودیو
-باید حتما رسمی و واقعی باشد
-از استفاده از تصاویر فیک خودداری کنید
-(تصویر لوگو اجباری نمی باشد!)
-      </p>
-      </MyVerticallyCenteredModal>
-          
+      <MyVerticallyCenteredModal
+                    show={LogoModalShow}
+                    info={true}
+                    onHide={LogoModalHide}>
+                    <p>
+                    آپلود تصویر لوگو اختیاری است اما در صورت استفاده ( از لوگو رسمی و واقعی استفاده کنید)
+                    </p>
+                </MyVerticallyCenteredModal>
+
+
+                <MyVerticallyCenteredModal
+                    show={ImageModalShow}
+                    info={true}
+                    onHide={ImageModalHide}>
+                    <p>
+                     آپلود تصویر استودیو اجباری است (لطفا از تصویر رسمی و واقعی استفاده کنید)
+                    </p>
+                </MyVerticallyCenteredModal>
    
       <Footer/>
     </div>

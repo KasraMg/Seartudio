@@ -6,7 +6,7 @@ import './MainSignUp.css'
 import swal from "sweetalert";
 import EmailLoading from '../EmailLoading/EmailLoading';
 import { useNavigate } from 'react-router-dom';
-export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) {
+export default function MainSignUp({ setImageModalShow, setTelgramModalShow,setLogoModalShow }) {
     const [Allprovinces, setAllProvinces] = useState(provinces)
     const [name, setName] = useState('')
     const [studioId, setStudioId] = useState('')
@@ -216,7 +216,7 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                         <p className='sign-up-logo-span'>تصویر لوگو</p>
                     )}
                     
-                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setLogoModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <div className='file-input-parent'>
@@ -225,7 +225,7 @@ export default function MainSignUp({ setStudioModalShow, setTelgramModalShow }) 
                     {!image &&(
                        <p className='sign-up-studio-span'>تصویر استودیو</p>
                     )}
-                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setImageModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='رمز عبور' />

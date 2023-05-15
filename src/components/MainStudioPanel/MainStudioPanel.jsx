@@ -10,7 +10,8 @@ export default function MainStudioPanel({ userInfo }) {
     const authContext =useContext(AuthContext)
     const [TelgramModalShow, setTelgramModalShow] = useState(false);
     const [Allprovinces, setAllProvinces] = useState(provinces)
-    const [StudioModalShow, setStudioModalShow] = useState(false);
+    const [LogoModalShow, setLogoModalShow] = useState(false);
+    const [ImageModalShow, setImageModalShow] = useState(false);
     const [name, setName] = useState(userInfo.name)
     const [address, setAddressValue] = useState(userInfo.address)
     const [phoneNumber, setPhoneNumber] = useState(userInfo.phoneNumber)
@@ -32,8 +33,11 @@ export default function MainStudioPanel({ userInfo }) {
     const TelegramonHide = () => {
         setTelgramModalShow(false)
     }
-    const StudioonHide = () => {
-        setStudioModalShow(false)
+    const LogoModalHide = () => {
+        setLogoModalShow(false)
+    }
+    const ImageModalHide = () => {
+        setImageModalShow(false)
     }
 
     const updateStudio = () => {
@@ -318,7 +322,7 @@ console.log(data);
                         <p className='sign-up-logo-span'>لوگو</p>
                     )}
 
-                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setLogoModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
 
@@ -328,7 +332,7 @@ console.log(data);
                     {!image && (
                         <p className='sign-up-studio-span'>عکس</p>
                     )}
-                    <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
+                    <img onClick={() => setImageModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
 
                 <textarea value={description} onChange={(e) => {
@@ -352,17 +356,23 @@ console.log(data);
 
 
                 <MyVerticallyCenteredModal
-                    show={StudioModalShow}
+                    show={LogoModalShow}
                     info={true}
-                    onHide={StudioonHide}>
+                    onHide={LogoModalHide}>
                     <p>
-                        عکس لوگو و تصویر استودیو
-                        باید حتما رسمی و واقعی باشد
-                        از استفاده از تصاویر فیک خودداری کنید
-                        (تصویر لوگو اجباری نمی باشد!)
+                        لطفا لوگو رسمی و واقعی جهت بروزرسانی انتخاب کنید.
                     </p>
                 </MyVerticallyCenteredModal>
 
+
+                <MyVerticallyCenteredModal
+                    show={ImageModalShow}
+                    info={true}
+                    onHide={ImageModalHide}>
+                    <p>
+                        لطفا عکس رسمی و واقعی جهت بروزرسانی انتخاب کنید.
+                    </p>
+                </MyVerticallyCenteredModal>
             </main>
 
             <button onClick={updateStudio} disabled={InputCheck || logo || image ? '' : 'disabled'} className={InputCheck || logo || image ? 'edit-btn' : 'edit-btn edit-btn-disabled'}>ویرایش</button>

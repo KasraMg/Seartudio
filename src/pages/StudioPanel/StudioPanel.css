@@ -110,3 +110,7 @@
 .sign-up-studio-span{
     cursor: default;
 }
+.StudioPanel .sign-up-studio-span {
+    right: 55px !important;
+    left: 0px !important;
+}
