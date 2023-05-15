@@ -3,7 +3,7 @@ import './StudioPanel.css'
 import StudioPanelHeader from '../../components/StudioPanelHeader/StudioPanelHeader'
 import IntroStudioSection from '../../components/IntroStudioSection/IntroStudioSection'
 import MainStudioPanel from '../../components/MainStudioPanel/MainStudioPanel'
-
+import swal from 'sweetalert'
 import AuthContext from '../../Context/authContext';
 
 import { useEffect } from 'react';
@@ -24,7 +24,39 @@ export default function StudioPanel() {
   
   }, [authContext.userInfos])
   
-
+const deleteStudio =()=>{
+  const localStorageData = JSON.parse(localStorage.getItem("user"));
+  swal({
+    title:'آیا از حذف این استودیو مطمئن هستید؟',
+    icon:'warning',
+    buttons:['نه','آره']
+  }).then(res=>{
+   if (res) {
+    swal({
+      title:'رمز عبور خود را وارد کنید',
+      content: "input",
+      buttons:'تایید'
+    }).then(data=>{
+     if (data) {
+   
+      let passwordData = {
+        "passWord":"2"
+      }
+       fetch('https://api.seartudio.com/studio/delete',{
+        method:'DELETE',
+        headers:{
+          authorization : localStorageData.token
+        },
+        body:passwordData
+       }).then(res=>{
+        console.log(res);
+        console.log(localStorageData.token);
+       })
+     }
+    })
+   }
+  })
+}
 
   return (
  
@@ -59,7 +91,7 @@ export default function StudioPanel() {
       )}
 
 
-
+              <button onClick={deleteStudio} className='delete-btn'>حذف استودیو</button>
     </div>
   )
 }

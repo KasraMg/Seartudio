@@ -109,6 +109,18 @@ console.log(data);
                         }).then(()=>
                             authContext.setUserInfos(data)
                         )
+                    }else if(data.statusCode == 415){
+                        swal({
+                            title: 'فقط فایل های png,jpg,jpeg پشتیبانی میشود.',
+                            icon: 'error',
+                            buttons: 'ok'
+                        })
+                    }else{
+                        swal({
+                            title: 'اپدیت با خطا رو به رو شد',
+                            icon: 'error',
+                            buttons: 'امتحان دوباره'
+                        })
                     }
 
 
@@ -119,46 +131,58 @@ console.log(data);
                     }
                 })
         } 
-        const kir={
-            logo:logo
-         }
+     
         if (logo) {
-        
+          
             let formData = new FormData();
             formData.append("logo", logo);
             fetch('https://api.seartudio.com/studio/updateLogo', {
-                method: 'POST',
+                method: 'PATCH',
                 headers: {
                     authorization : localStorageData.token
                 },
-                body: JSON.stringify(kir)
+                body: formData
             })
-                .then(res =>{
+                .then(res =>
                     res.json()
-                     console.log(res)})
-                // .then(data => {
+                    ).then(data=>{
+                        if (data.statusCode == 201) {
+                            setErrors(null)
+                            setLoader(false)
+                            swal({
+                                title: 'تغییرات با موفقیت ثبت شد.',
+                                icon: 'success',
+                                buttons: 'ok'
+                            }).then(()=>
+                                authContext.setUserInfos(data)
+                            )
+                        } else if(data.statusCode == 415){
+                            swal({
+                                title: 'فقط فایل های png,jpg,jpeg پشتیبانی میشود.',
+                                icon: 'error',
+                                buttons: 'ok'
+                            })
+                        }else{
+                            swal({
+                                title: 'اپدیت با خطا رو به رو شد',
+                                icon: 'error',
+                                buttons: 'امتحان دوباره'
+                            })
+                        }
+
+                        
+    
+    
+    
+                        if (data && data.errors) {
+                            setErrors(data.errors);
+                            setLoader(false)
+                        }
+                        
+                       
+                    })
+                
                  }
-
-                //     if (data.statusCode == 201) {
-                //         setErrors(null)
-                //         setLoader(false)
-                //         swal({
-                //             title: 'تغییرات با موفقیت ثبت شد.',
-                //             icon: 'success',
-                //             buttons: 'ok'
-                //         }).then(()=>
-                //             authContext.setUserInfos(data)
-                //         )
-                //     }
-
-
-
-                //     if (data && data.errors) {
-                //         setErrors(data.errors);
-                //         setLoader(false)
-                //     }
-                // })
-        // }
 
     }
     return (
@@ -286,12 +310,12 @@ console.log(data);
 
                 <div className='file-input-parent'>
                     <input onChange={(e) => {
-                       e.preventDefault()
+                        setLogo(e.target.files[0])
                        
 
                     }} type="file" className={!logo ? ' input-c-transparent logo-input' : 'logo-input input-c-white'} dir='ltr' placeholder='تصویر لوگو' />
                     {!logo && (
-                        <p className='sign-up-logo-span'>به زودی ...</p>
+                        <p className='sign-up-logo-span'>لوگو</p>
                     )}
 
                     <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
@@ -299,10 +323,10 @@ console.log(data);
 
 
                 <div className='file-input-parent'>
-                    <input onChange={(e) => {    e.preventDefault()  }  } type="file" dir='ltr'  className={!image ? ' input-c-transparent picture-input' : 'picture-input input-c-white'} placeholder='تصویر استودیو' />
+                    <input onChange={(e) => {  setImage(e.target.files[0])}  } type="file" dir='ltr'  className={!image ? ' input-c-transparent picture-input' : 'picture-input input-c-white'} placeholder='تصویر استودیو' />
                     
                     {!image && (
-                        <p className='sign-up-studio-span'>به زودی ...</p>
+                        <p className='sign-up-studio-span'>عکس</p>
                     )}
                     <img onClick={() => setStudioModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>

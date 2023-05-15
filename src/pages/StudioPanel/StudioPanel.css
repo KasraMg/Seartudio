@@ -49,6 +49,20 @@
    
 
 }
+.delete-btn{
+    padding: .4rem 2rem;
+    background-color: #EC4141;
+    border-radius:60px;
+    font-family: lalezar;
+    font-size: 16x;
+    color: white;
+    margin-bottom: 5rem;
+    display: block;
+   
+    margin-left: auto;
+    border: none;
+    margin-bottom: 5rem ;
+}
 .edit-btn{
     padding: .4rem 3rem;
     background-color: #EC4141;
