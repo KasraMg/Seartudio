@@ -20,6 +20,7 @@ export default function MainStudioPanel({ userInfo }) {
     const [telId, setTelId] = useState(userInfo.telegramId)
     const [logo, setLogo] = useState()
     const [image, setImage] = useState()
+    const [password, setPassword] = useState(null)
     const [city, setCity] = useState(userInfo.province)
     const [license, setLicense] = useState(userInfo.license)
     const [type, setType] = useState(userInfo.type)
@@ -55,6 +56,7 @@ export default function MainStudioPanel({ userInfo }) {
             formData.append("license", license);
             formData.append("type", type);
             formData.append("description", description);
+            formData.append("passWord", password);
 
 
             fetch('https://api.seartudio.com/studio/update', {
@@ -334,13 +336,17 @@ console.log(data);
                     )}
                     <img onClick={() => setImageModalShow(true)} src="./images/signup/Group 326.png" alt="" />
                 </div>
-
+           
                 <textarea value={description} onChange={(e) => {
                     setInputCheck('normal')
                     setDescription(e.target.value)
                 }
                 } placeholder='توضیحات...' rows="1"></textarea>
-
+     <input value={password} onChange={(e) => {
+                    setInputCheck('normal')
+                    setPassword(e.target.value)
+                }
+                } type="text" placeholder='رمز عبور' />
                 <MyVerticallyCenteredModal
                     show={TelgramModalShow}
                     onHide={TelegramonHide}

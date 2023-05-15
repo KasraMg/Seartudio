@@ -113,4 +113,17 @@
 .StudioPanel .sign-up-studio-span {
     right: 55px !important;
     left: 0px !important;
+    width: 40px;
+}
+.StudioPanel .create-studio input:nth-child(3) {
+    background-image: url(../images/signup/phone.png) !important;
+}
+
+
+.StudioPanel  .create-studio input:nth-child(4) {
+    background-image: url('../images/signup/Group 31.png') !important;
+}
+
+.StudioPanel  .create-studio input:nth-child(6) {
+    background-image: url('../images/signup/Group 32.png') !important;
 }
