@@ -116,12 +116,14 @@ console.log(data);
                             authContext.setUserInfos(data)
                         )
                     }else if(data.statusCode == 415){
+                        setLoader(false)
                         swal({
                             title: 'فقط فایل های png,jpg,jpeg پشتیبانی میشود.',
                             icon: 'error',
                             buttons: 'ok'
                         })
                     }else{
+                        setLoader(false)
                         swal({
                             title: 'اپدیت با خطا رو به رو شد',
                             icon: 'error',
@@ -163,12 +165,14 @@ console.log(data);
                                 authContext.setUserInfos(data)
                             )
                         } else if(data.statusCode == 415){
+                            setLoader(false)
                             swal({
                                 title: 'فقط فایل های png,jpg,jpeg پشتیبانی میشود.',
                                 icon: 'error',
                                 buttons: 'ok'
                             })
                         }else{
+                            setLoader(false)
                             swal({
                                 title: 'اپدیت با خطا رو به رو شد',
                                 icon: 'error',
