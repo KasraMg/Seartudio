@@ -132,10 +132,19 @@ padding: 0rem 16.5rem;
 @media (max-width:500px) {
     .login-401{
         padding: 0rem 1rem;
+    }.forgot-password{
+        text-align: center;
     }
 
 }
 .Login .EmailLoading-loader {
     left: 0 !important;
     top: 44% !important;
+}
+
+.forgot-password{
+    color: #EC4141;
+    font-family: vazir;
+    margin-top: 2rem;
+    cursor: pointer;
 }

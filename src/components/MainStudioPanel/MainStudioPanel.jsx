@@ -69,10 +69,11 @@ export default function MainStudioPanel({ userInfo }) {
                 .then(res => res.json())
                 .then(data => {
                 
-
+                    console.log(data);
                     if (data.statusCode == 201) {
                         setErrors(null)
                         setLoader(false)
+                        setInputCheck(false)
                         swal({
                             title: 'تغییرات با موفقیت ثبت شد.',
                             icon: 'success',

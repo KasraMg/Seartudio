@@ -43,6 +43,9 @@ const deleteStudio =()=>{
         "passWord":"2"
       }
        fetch('https://api.seartudio.com/studio/delete',{
+        headers: {
+          "Content-Type": "application/json"
+      },
         method:'DELETE',
         headers:{
           authorization : localStorageData.token
