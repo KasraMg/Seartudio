@@ -127,3 +127,8 @@
 .StudioPanel  .create-studio input:nth-child(6) {
     background-image: url('../images/signup/Group 32.png') !important;
 }
+
+.StudioPanel .EmailLoading-loader {
+    left: 0 !important;
+    top: 44% !important;
+}

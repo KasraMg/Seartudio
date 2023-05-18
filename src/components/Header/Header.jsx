@@ -17,8 +17,7 @@ export default function Header() {
         }).then(res => {
             if (res) {
                 authContext.logout()
-                authContext.setUserInfos({})
-                location.reload()
+               
             }
         }
         )

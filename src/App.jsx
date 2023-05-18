@@ -22,10 +22,10 @@ export default function App() {
 
    const logout = useCallback(() => {
     setToken(null);
-    setUserInfos({});
     setIsLoggedIn(false)
     setuserRole(null)
     localStorage.removeItem("user");
+    setUserInfos({});
   });
 
   useEffect(() => {
