@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Footer from '../../components/Footer/Footer';
 import './SignUp.css'
@@ -8,7 +8,7 @@ import MainSignUp from '../../components/MainSignUp/MainSignUp';
 
 import MyVerticallyCenteredModal from '../../components/Modal/Modal';
 export default function SignUp() {
-
+  const [dataLink,setDataLink]=useState(null)
   const [TelgramModalShow, setTelgramModalShow] = useState(false);
   const [LogoModalShow, setLogoModalShow] = useState(false);
     const [ImageModalShow, setImageModalShow] = useState(false);
@@ -21,6 +21,13 @@ export default function SignUp() {
 const ImageModalHide = () => {
     setImageModalShow(false)
 }
+useEffect(() => {
+  fetch('https://api.seartudio.com/studio/getLink')
+  .then(res=>res.json())
+  .then(data=>setDataLink(data.data))
+
+
+}, [])
 
   return (
     <div className='SignUp'>
@@ -30,7 +37,7 @@ const ImageModalHide = () => {
         <div>
           <p>در معرض دید باش</p>
           <p>خودتو رو به صدها ارتیست نشون بده درامدتو افزایش بده!</p>
-          <span>!توضیحات کامل ثبت استودیو رو از <a href='https://t.me/seartudio_support'>اینجا</a> ببین</span>
+          <span>!توضیحات کامل ثبت استودیو رو از <a href={dataLink && dataLink}>اینجا</a> ببین</span>
         </div>
 
         <img src="../images/signup/Group 29.png" alt="" />
