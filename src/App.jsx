@@ -8,6 +8,7 @@ import AuthContext from "./Context/authContext";
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(false);
+  const [updateUser, setUpdateUser] = useState(false);
   const [userInfos, setUserInfos] = useState({});
   const [userRole, setuserRole] = useState(null);
   const router = useRoutes(routes);
@@ -54,10 +55,11 @@ export default function App() {
     } else {
       setIsLoggedIn(false)
     }
-  }, [userInfos])
+  }, [updateUser])
   
 
   useEffect(() => {
+    console.log('hi');
     const localStorageData = JSON.parse(localStorage.getItem("user"));
   
     if (localStorageData) {
@@ -96,7 +98,8 @@ export default function App() {
         setUserInfos,
         login,
         userRole,
-        logout
+        logout,
+        setUpdateUser
       }}
     >
       {router}

@@ -74,13 +74,15 @@ export default function MainStudioPanel({ userInfo }) {
                         setErrors(null)
                         setLoader(false)
                         setInputCheck(false)
+                        authContext.setUpdateUser(true)
                         swal({
                             title: 'تغییرات با موفقیت ثبت شد.',
                             icon: 'success',
                             buttons: 'ok'
-                        }).then(()=>
+                        }).then(()=>{
                             authContext.setUserInfos(data)
-                        )
+                            authContext.setUpdateUser(false)
+                        })
                     }
 
 
@@ -109,13 +111,15 @@ console.log(data);
                     if (data.statusCode == 201) {
                         setErrors(null)
                         setLoader(false)
+                        authContext.setUpdateUser(true)
                         swal({
                             title: 'تغییرات با موفقیت ثبت شد.',
                             icon: 'success',
                             buttons: 'ok'
-                        }).then(()=>
+                        }).then(()=>{
                             authContext.setUserInfos(data)
-                        )
+                            authContext.setUpdateUser(false)
+                       } )
                     }else if(data.statusCode == 415){
                         setLoader(false)
                         swal({
@@ -156,15 +160,17 @@ console.log(data);
                     res.json()
                     ).then(data=>{
                         if (data.statusCode == 201) {
+                            authContext.setUpdateUser(true)
                             setErrors(null)
                             setLoader(false)
                             swal({
                                 title: 'تغییرات با موفقیت ثبت شد.',
                                 icon: 'success',
                                 buttons: 'ok'
-                            }).then(()=>
+                            }).then(()=>{
                                 authContext.setUserInfos(data)
-                            )
+                                authContext.setUpdateUser(false)
+                           } )
                         } else if(data.statusCode == 415){
                             setLoader(false)
                             swal({
